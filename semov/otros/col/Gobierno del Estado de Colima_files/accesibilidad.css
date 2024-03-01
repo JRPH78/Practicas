@@ -1,0 +1,137 @@
+body.oscuro {
+    background: #000;
+}
+
+body.oscuro p {
+    color: #fff !important;
+}
+
+body.oscuro h1 {
+    color: #fff !important;
+}
+
+body.oscuro h2 {
+    color: #fff !important;
+}
+
+body.oscuro h3 {
+    color: #fff !important;
+}
+
+body.oscuro h4 {
+    color: #fff !important;
+}
+
+body.oscuro h5 {
+    color: #fff !important;
+}
+
+body.oscuro legend {
+    color: #fff !important;
+}
+
+body.oscuro a {
+    color: #fff !important;
+}
+
+body.oscuro .Texto {
+    color: #fff !important;
+}
+
+body.oscuro .breadcrumb {
+    background: #000 !important;
+}
+
+body.oscuro .btn-default {
+    background: #000 !important;
+    color: #fff;
+    border: 2px solid #fff !important;
+}
+
+body.oscuro .panel-heading {
+    background: #000 !important;
+    color: #fff;
+    border: 2px solid #fff !important;
+}
+
+body.oscuro .footer-backgroundcolor-pu {
+    background: #000 !important;
+    color: #fff;
+}
+
+body.oscuro .contenedor-buscador-pu {
+    background: #000 !important;
+}
+
+body.oscuro i {
+    color: #fff !important;
+}
+
+
+/* 
+body.oscuro .options_visuales {
+    border-left: 1px solid #fff !important;
+}
+
+body.oscuro #navbar_visuales {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff !important;
+} */
+
+body.oscuro .inner-temas-interes-pu {
+    background-color: #fff !important;
+    height: 5px !important;
+}
+
+body.oscuro .navbar-secondary-container {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+#navbar_visuales {
+    font-family: 'Open Sans', 'sans-serif' !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: rgba(57, 60, 62, 0.99) !important;
+    padding: 10px;
+    color: #fff;
+    /* margin-top: 10px; */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.options_visuales {
+    border-left: 1px solid #fff;
+    cursor: pointer !important;
+}
+
+.options_visuales:hover {
+    opacity: 0.9;
+    cursor: pointer !important;
+    text-decoration: underline;
+}
+
+.separador-navbar {
+    height: 100px;
+    width: 100%;
+    clear: both;
+}
+
+.transition {
+    -webkit-transform: scale(1.8);
+    -moz-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+    position: absolute;
+    /* border-radius: 100%; */
+    z-index: 9999;
+    /Multiple box shadows to achieve the glass effect/
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+}
+
+#GobNavbar {
+    top: 0px;
+    z-index: 9999 !important;
+}

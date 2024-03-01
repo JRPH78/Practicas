@@ -1,0 +1,139 @@
+$(document).ready(function() {
+  //total = $("table tr").length;
+  // alert(total);
+  // $("table#busquedaGeneral tbody tr").show();
+  $("table#tablabusquedaGeneral tr").each(function( index ) {
+          if(index > 10){
+             $("table#tablabusquedaGeneral tr").eq(index).hide();   
+          }else{          
+              $("table#tablabusquedaGeneral tr").eq(index).addClass("mostrada");
+              var countmostrar = $("table#tablabusquedaGeneral tr.mostrada").length;;
+              if(countmostrar < 10){
+                 $(".btnBusquebg").hide();
+              }else{
+                 $(".btnBusquebg").show();
+              }
+          }
+  });
+
+  $("table#busquedaTramite tr").each(function( index ) {
+          if(index > 10){
+             $("table#busquedaTramite tr").eq(index).hide();   
+          }else{          
+              $("table#busquedaTramite tr").eq(index).addClass("mostrada");
+              var countmostrar = $("table#busquedaTramite tr.mostrada").length;;
+              if(countmostrar < 10){
+                 $(".btnBusquet").hide();
+              }else{
+                 $(".btnBusquet").show();
+              }
+          }
+  });
+
+  $("table#busquedaTramiteLinea tr").each(function( index ) {
+          if(index > 10){
+             $("table#busquedaTramiteLinea tr").eq(index).hide();   
+          }else{          
+              $("table#busquedaTramiteLinea tr").eq(index).addClass("mostrada");
+              var countmostrar = $("table#busquedaTramiteLinea tr.mostrada").length;;
+              if(countmostrar < 10){
+                 $(".btnBusquetl").hide();
+              }else{
+                 $(".btnBusquetl").show();
+              }
+          }
+  });
+
+  $("table#busquedaMicrositio tr").each(function( index ) {
+            if(index > 10){
+               $("table#busquedaMicrositio tr").eq(index).hide();   
+            }else{          
+                $("table#busquedaMicrositio tr").eq(index).addClass("mostrada");
+                var countmostrar = $("table#busquedaMicrositio tr.mostrada").length;;
+                if(countmostrar < 10){
+                   $(".btnBusquems").hide();
+                }else{
+                   $(".btnBusquems").show();
+                }
+            }
+  });   
+
+});
+
+function mostrarBusquedaTramite() {
+   num = $("table#busquedaTramite tr.mostrada").length;
+    var total = num + 10;
+    $("table#busquedaTramite tr").each(function( index ) {
+          if(index > total){
+              $("table#busquedaTramite tr").eq(index).hide();
+          }else{
+              $("table#busquedaTramite tr").eq(index).show();
+              $("table#busquedaTramite tr").eq(index).addClass("mostrada");
+              var countmostrar = $("table#busquedaTramite tr.mostrada").length;
+              if(countmostrar < total){
+                 $(".btnBusquet").hide();
+              }else{
+                 $(".btnBusquet").show();
+              }                           
+          }
+    });
+}
+
+function MostrarMasBusquedaGeneral() {
+   num = $("table#tablabusquedaGeneral tr.mostrada").length;
+   // num = $("table#busquedaGeneral tbody tr").length
+
+    var total = num + 10;
+    $("table#tablabusquedaGeneral tr").each(function( index ) {
+          if(index > total){
+              $("table#tablabusquedaGeneral tr").eq(index).hide();
+          }else{
+              $("table#tablabusquedaGeneral tr").eq(index).show();
+              $("table#tablabusquedaGeneral tr").eq(index).addClass("mostrada");
+              var countmostrar = $("table#tablabusquedaGeneral tr.mostrada").length;
+              if(countmostrar < total){
+                 $(".btnBusquebg").hide();
+              }else{
+                 $(".btnBusquebg").show();
+              }                           
+          }
+    });
+}
+
+function mostrarTramiteLinea() {
+  num = $("table#busquedaTramiteLinea tr.mostrada").length;
+    var total = num + 10;
+    $("table#busquedaTramiteLinea tr").each(function( index ) {
+          if(index > total){
+              $("table#busquedaTramiteLinea tr").eq(index).hide();
+          }else{
+              $("table#busquedaTramiteLinea tr").eq(index).show();
+              $("table#busquedaTramiteLinea tr").eq(index).addClass("mostrada");
+              var countmostrar = $("table#busquedaTramiteLinea tr.mostrada").length;
+              if(countmostrar < total){
+                 $(".btnBusquetl").hide();
+              }else{
+                 $(".btnBusquetl").show();
+              }                           
+          }
+    }); 
+}
+
+function mostrarBusquedaMicrositio() {
+  num = $("table#busquedaMicrositio tr.mostrada").length;
+    var total = num + 10;
+    $("table#busquedaMicrositio tr").each(function( index ) {
+          if(index > total){
+              $("table#busquedaMicrositio tr").eq(index).hide();
+          }else{
+              $("table#busquedaMicrositio tr").eq(index).show();
+              $("table#busquedaMicrositio tr").eq(index).addClass("mostrada");
+              var countmostrar = $("table#busquedaMicrositio tr.mostrada").length;
+              if(countmostrar < total){
+                 $(".btnBusquems").hide();
+              }else{
+                 $(".btnBusquems").show();
+              }                           
+          }
+    }); 
+}

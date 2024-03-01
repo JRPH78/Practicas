@@ -1,0 +1,3427 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://www.col.gob.mx/ -->
+<html ng-app="PortalUnico" prueba="true">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      http-equiv="origin-trial"
+      content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="
+    />
+    <style type="text/css">
+      .swal-icon--error {
+        border-color: #f27474;
+        -webkit-animation: animateErrorIcon 0.5s;
+        animation: animateErrorIcon 0.5s;
+      }
+      .swal-icon--error__x-mark {
+        position: relative;
+        display: block;
+        -webkit-animation: animateXMark 0.5s;
+        animation: animateXMark 0.5s;
+      }
+      .swal-icon--error__line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f27474;
+        display: block;
+        top: 37px;
+        border-radius: 2px;
+      }
+      .swal-icon--error__line--left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 17px;
+      }
+      .swal-icon--error__line--right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 16px;
+      }
+      @-webkit-keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      .swal-icon--warning {
+        border-color: #f8bb86;
+        -webkit-animation: pulseWarning 0.75s infinite alternate;
+        animation: pulseWarning 0.75s infinite alternate;
+      }
+      .swal-icon--warning__body {
+        width: 5px;
+        height: 47px;
+        top: 10px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--warning__body,
+      .swal-icon--warning__dot {
+        position: absolute;
+        left: 50%;
+        background-color: #f8bb86;
+      }
+      .swal-icon--warning__dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -4px;
+        bottom: -11px;
+      }
+      @-webkit-keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      @keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      .swal-icon--success {
+        border-color: #a5dc86;
+      }
+      .swal-icon--success:after,
+      .swal-icon--success:before {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .swal-icon--success:before {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 60px 60px;
+        transform-origin: 60px 60px;
+      }
+      .swal-icon--success:after {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 60px;
+        transform-origin: 0 60px;
+        -webkit-animation: rotatePlaceholder 4.25s ease-in;
+        animation: rotatePlaceholder 4.25s ease-in;
+      }
+      .swal-icon--success__ring {
+        width: 80px;
+        height: 80px;
+        border: 4px solid hsla(98, 55%, 69%, 0.2);
+        border-radius: 50%;
+        box-sizing: content-box;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        z-index: 2;
+      }
+      .swal-icon--success__hide-corners {
+        width: 5px;
+        height: 90px;
+        background-color: #fff;
+        padding: 1px;
+        position: absolute;
+        left: 28px;
+        top: 8px;
+        z-index: 1;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .swal-icon--success__line {
+        height: 5px;
+        background-color: #a5dc86;
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 2;
+      }
+      .swal-icon--success__line--tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation: animateSuccessTip 0.75s;
+        animation: animateSuccessTip 0.75s;
+      }
+      .swal-icon--success__line--long {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: animateSuccessLong 0.75s;
+        animation: animateSuccessLong 0.75s;
+      }
+      @-webkit-keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @-webkit-keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @-webkit-keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      @keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      .swal-icon--info {
+        border-color: #c9dae1;
+      }
+      .swal-icon--info:before {
+        width: 5px;
+        height: 29px;
+        bottom: 17px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--info:after,
+      .swal-icon--info:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: #c9dae1;
+      }
+      .swal-icon--info:after {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -3px;
+        top: 19px;
+      }
+      .swal-icon {
+        width: 80px;
+        height: 80px;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+        box-sizing: content-box;
+        margin: 20px auto;
+      }
+      .swal-icon:first-child {
+        margin-top: 32px;
+      }
+      .swal-icon--custom {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+      }
+      .swal-icon img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .swal-title {
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: 600;
+        text-transform: none;
+        position: relative;
+        display: block;
+        padding: 13px 16px;
+        font-size: 27px;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .swal-title:first-child {
+        margin-top: 26px;
+      }
+      .swal-title:not(:first-child) {
+        padding-bottom: 0;
+      }
+      .swal-title:not(:last-child) {
+        margin-bottom: 13px;
+      }
+      .swal-text {
+        font-size: 16px;
+        position: relative;
+        float: none;
+        line-height: normal;
+        vertical-align: top;
+        text-align: left;
+        display: inline-block;
+        margin: 0;
+        padding: 0 10px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.64);
+        max-width: calc(100% - 20px);
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+      }
+      .swal-text:first-child {
+        margin-top: 45px;
+      }
+      .swal-text:last-child {
+        margin-bottom: 45px;
+      }
+      .swal-footer {
+        text-align: right;
+        padding-top: 13px;
+        margin-top: 13px;
+        padding: 13px 16px;
+        border-radius: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .swal-button-container {
+        margin: 5px;
+        display: inline-block;
+        position: relative;
+      }
+      .swal-button {
+        background-color: #7cd1f9;
+        color: #fff;
+        border: none;
+        box-shadow: none;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 10px 24px;
+        margin: 0;
+        cursor: pointer;
+      }
+      .swal-button[not:disabled]:hover {
+        background-color: #78cbf2;
+      }
+      .swal-button:active {
+        background-color: #70bce0;
+      }
+      .swal-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, 0.29);
+      }
+      .swal-button[disabled] {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .swal-button::-moz-focus-inner {
+        border: 0;
+      }
+      .swal-button--cancel {
+        color: #555;
+        background-color: #efefef;
+      }
+      .swal-button--cancel[not:disabled]:hover {
+        background-color: #e8e8e8;
+      }
+      .swal-button--cancel:active {
+        background-color: #d7d7d7;
+      }
+      .swal-button--cancel:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, 0.29);
+      }
+      .swal-button--danger {
+        background-color: #e64942;
+      }
+      .swal-button--danger[not:disabled]:hover {
+        background-color: #df4740;
+      }
+      .swal-button--danger:active {
+        background-color: #cf423b;
+      }
+      .swal-button--danger:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, 0.29);
+      }
+      .swal-content {
+        padding: 0 20px;
+        margin-top: 20px;
+        font-size: medium;
+      }
+      .swal-content:last-child {
+        margin-bottom: 20px;
+      }
+      .swal-content__input,
+      .swal-content__textarea {
+        -webkit-appearance: none;
+        background-color: #fff;
+        border: none;
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        padding: 10px 13px;
+        border-radius: 2px;
+        transition: border-color 0.2s;
+      }
+      .swal-content__input:focus,
+      .swal-content__textarea:focus {
+        outline: none;
+        border-color: #6db8ff;
+      }
+      .swal-content__textarea {
+        resize: vertical;
+      }
+      .swal-button--loading {
+        color: transparent;
+      }
+      .swal-button--loading ~ .swal-button__loader {
+        opacity: 1;
+      }
+      .swal-button__loader {
+        position: absolute;
+        height: auto;
+        width: 43px;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+      }
+      .swal-button__loader div {
+        display: inline-block;
+        float: none;
+        vertical-align: baseline;
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: none;
+        margin: 2px;
+        opacity: 0.4;
+        border-radius: 7px;
+        background-color: hsla(0, 0%, 100%, 0.9);
+        transition: background 0.2s;
+        -webkit-animation: swal-loading-anim 1s infinite;
+        animation: swal-loading-anim 1s infinite;
+      }
+      .swal-button__loader div:nth-child(3n + 2) {
+        -webkit-animation-delay: 0.15s;
+        animation-delay: 0.15s;
+      }
+      .swal-button__loader div:nth-child(3n + 3) {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+      @-webkit-keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      @keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      .swal-overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .swal-overlay:before {
+        content: " ";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+      .swal-overlay--show-modal {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .swal-overlay--show-modal .swal-modal {
+        opacity: 1;
+        pointer-events: auto;
+        box-sizing: border-box;
+        -webkit-animation: showSweetAlert 0.3s;
+        animation: showSweetAlert 0.3s;
+        will-change: transform;
+      }
+      .swal-modal {
+        width: 478px;
+        opacity: 0;
+        pointer-events: none;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        position: static;
+        margin: 20px auto;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        z-index: 10001;
+        transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+      }
+      @media (max-width: 500px) {
+        .swal-modal {
+          width: calc(100% - 20px);
+        }
+      }
+      @-webkit-keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <meta
+      name="google-site-verification"
+      content="vgE7xTPnRDI9JNHuGHmNQeU55Yr58j9hwq9Wk06R8qk"
+    />
+    <title>Gobierno del Estado de Colima</title>
+    <link
+      rel="SHORTCUT ICON"
+      href="https://openapis.col.gob.mx/API_PU/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Required meta tags -->
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+
+    <link
+      rel="stylesheet"
+      href="./Gobierno del Estado de Colima_files/bootstrap.min.css"
+    />
+
+    <!-- Customcss comentario -->
+
+    <link
+      rel="stylesheet"
+      href="./Gobierno del Estado de Colima_files/layout.css"
+    />
+    <script
+      type="text/javascript"
+      async=""
+      src="./Gobierno del Estado de Colima_files/recaptcha__es_419.js.descarga"
+      crossorigin="anonymous"
+      integrity="sha384-c9XowJ1lb1g1NPrQ7UrLzKtjjRNRlpSWpOU7fWXUzfaqCWZWRPcR+K5pvV7tUiOs"
+      nonce="ukjKNehN"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./Gobierno del Estado de Colima_files/analytics.js.descarga"
+      nonce="ukjKNehN"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./Gobierno del Estado de Colima_files/js(1)"
+      nonce="ukjKNehN"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./Gobierno del Estado de Colima_files/jquery-3.2.1.js.descarga"
+    ></script>
+
+    <!-- termina Customcss comentario -->
+
+    <link rel="canonical" href="https://www.col.gob.mx/" />
+    <meta property="og:url" content="http://www.col.gob.mx" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gobierno del estado de colima" />
+    <meta property="og:description" content="Gobierno del estado de colima" />
+    <meta
+      property="og:image"
+      content="http://www.col.gob.mx/assets/img/escudo.png"
+    />
+    <link rel="canonical" href="https://www.col.gob.mx/" />
+    <meta property="og:url" content="http://www.col.gob.mx" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gobierno del estado de colima" />
+    <meta property="og:description" content="Gobierno del estado de colima" />
+    <meta
+      property="og:image"
+      content="http://www.col.gob.mx/assets/img/escudo.png"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./Gobierno del Estado de Colima_files/customcss.css"
+    />
+  </head>
+  <body
+    data-url="https://openapis.col.gob.mx/API_PU/"
+    id="Body"
+    class="visible"
+    style="zoom: 100%"
+  >
+    <div id="fb-root"></div>
+    <script
+      async=""
+      defer=""
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&amp;version=v9.0"
+      nonce="ukjKNehN"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=59cd2679fdc69400125962c9&amp;product=inline-share-buttons"
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./Gobierno del Estado de Colima_files/js(2)"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-121812210-1");
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./Gobierno del Estado de Colima_files/css(2)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="./Gobierno del Estado de Colima_files/bowser.min.js.descarga"></script>
+    <link
+      href="./Gobierno del Estado de Colima_files/accesibilidad.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="./Gobierno del Estado de Colima_files/accesibilidad.js.descarga"
+    ></script>
+
+    <style>
+      .border_resaltar {
+        border: 2px solid red;
+      }
+    </style>
+
+    <div
+      class="row-fluid"
+      id="navbar_visuales"
+      data-mostrar_herramientas=""
+      style="display: none"
+    >
+      <div class="container">
+        <div class="row font-changer internal print">
+          <div title="Herramientas de accesibilidad web" class="col-md-2">
+            <i class="fa fa-universal-access fa-2x"></i>&nbsp; Accesibilidad Web
+          </div>
+          <div class="col-md-10">
+            <div class="row">
+              <!-- <div class="col-md-12 text-center">Herramientas de accesibilidad web</div> -->
+              <div
+                class="col-md-2 options_visuales cursor"
+                title="Aumentar tamaño de la página"
+              >
+                <div class="aumentarFont">
+                  <i class="fa fa-font fa-2x">a+</i><br />Aumentar tamaño
+                </div>
+              </div>
+              <div
+                class="col-md-2 options_visuales cursor"
+                title="Disminuir tamañao de la página"
+              >
+                <div class="disminuirFont">
+                  <i class="fa fa-font fa-2x">a-</i><br />Disminuir tamaño
+                </div>
+              </div>
+              <div
+                title="Aplicar alto contraste"
+                id="pantalla_mod"
+                data-tipo=""
+                class="col-md-2 cursor options_visuales"
+                onclick="ActivaModoNocturno()"
+              >
+                <i class="fa fa-adjust fa-2x"></i><br /><span
+                  >Alto contraste</span
+                >
+              </div>
+              <div
+                title=""
+                class="col-md-2 options_visuales cursor"
+                id="estado_narrador"
+              >
+                <i class="fa fa-play fa-2x"></i><br />
+                <span>Narrador (Desactivado)<span> </span></span>
+              </div>
+              <div
+                title="Ampliar las imagenes al pasar sobre ellas"
+                class="col-md-2 options_visuales cursor"
+                onclick="AmpliarImagen()"
+              >
+                <i class="fa fa-image fa-2x"></i><br />
+                Ampliar imagen
+              </div>
+              <a
+                title="Reestablecer herramientas"
+                onclick="ActivaModoRestablecer()"
+                target="_blank"
+                style="color: #fff !important"
+                class="col-md-2 options_visuales cursor"
+              >
+                <i class="fa fa-refresh fa-2x"></i><br />
+                Restablecer
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---
+<div class="container">
+    <input type="text" placeholder="Texto to Speech" id="text" value="hola">
+    <div class="conversation"></div>
+    <div class="container-button">
+      <select id="voices"></select>
+      <button id="btnSave"><i class="fas fa-upload"></i>Save text</button>
+      <button id="btnLoad" disabled><i class="fas fa-download"></i>Load text</button>
+      <button id="btnPlay" disabled><i class="fas fa-play-circle"></i>Play text</button>
+    </div>
+  </div>
+--->
+    <!-- nav container -->
+    <div
+      id="GobNavbar"
+      class="container-fluid navbar-container-pu op GobNavbar menu-background-transparent-pu fixed-top"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <nav class="navbar navbar-toggleable-md navbar-light">
+              <button
+                class="navbar-toggler navbar-toggler-right custom-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a
+                class="navbar-brand text-center"
+                href="https://www.col.gob.mx/"
+              >
+                <!-- <i class="fa fa-home fa-2x" style="color:#fff;"></i>    nav-image-colima-estado -->
+                <img
+                  src="./Gobierno del Estado de Colima_files/logomin.jpg"
+                  class="img-fluid"
+                  title="Ir al portal"
+                  alt="colima estado"
+                />
+              </a>
+              <div
+                class="collapse navbar-collapse justify-content-md-center"
+                id="navbarNavDropdown"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a
+                      class="nav-link cursor denuncia-menu"
+                      target="_blank"
+                      href="https://www.col.gob.mx/coronavirus"
+                      >CORONAVIRUS</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="https://www.col.gob.mx/Portal/Tramites"
+                      >Trámites</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.col.gob.mx/#"
+                      >Gobierno</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="https://www.col.gob.mx/Portal/#sec_atencion"
+                      >Contáctanos</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link cursor"
+                      target="_blank"
+                      href="https://www.col.gob.mx/DatosAbiertos"
+                      >Datos</a
+                    >
+                  </li>
+                  <!-- <li class="nav-item">
+		      	<a href="https://www.col.gob.mx/transparencia" class="nav-link cursor" target="_blank">Transparencia</a>
+		      </li> -->
+                  <li class="nav-item">
+                    <a
+                      href="https://www.col.gob.mx/Portal/contenido/NDYzMDY="
+                      class="nav-link cursor"
+                      target="_blank"
+                      >Transparencia</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link cursor denuncia-menu"
+                      href="https://www.col.gob.mx/index.php/Portal/denuncia"
+                      >DENUNCIA</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="navbar-search-li-first"
+                      href="https://www.col.gob.mx/#"
+                      onclick="ocultar(this)"
+                      ><i
+                        alt="Buscar"
+                        title="Buscar"
+                        class="fa fa-search"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                  </li>
+
+                  <form
+                    id="formBusqueda"
+                    method="GET"
+                    action="https://www.col.gob.mx/Portal/detalle_busqueda"
+                    class="nav-item display-none"
+                  >
+                    <div class="input-group" id="navbar-input-search">
+                      <input type="text" name="q" class="form-control" />
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="submit">
+                          <i
+                            alt="Buscar"
+                            title="Buscar"
+                            class="fa fa-search"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+
+                  <i
+                    id="mostrar_visuales"
+                    title="Mostrar herramientas de Accesibilidad Web"
+                    onclick="app_visuales.mostrarVisuales()"
+                    class="fa fa-universal-access fa-2x text-white ml-3 mt-2"
+                  ></i>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <a
+        href="https://www.col.gob.mx/#"
+        class="scrollToTop ui-draggable ui-draggable-handle"
+        id="ScrollTop"
+        style="display: inline"
+      ></a>
+      <script type="text/javascript">
+        function ocultar(elem) {
+          var id = elem.id;
+          document.getElementById(id).style.display = "none";
+          //document.getElementById("navbar-search-li-second").style.display = "inline";
+          document.getElementById("formBusqueda").style.display = "inline";
+        }
+      </script>
+    </div>
+    <div id="contenidoPagina">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class=""
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="1"
+            class=""
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="2"
+            class=""
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="3"
+            class="active"
+          ></li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="4"
+            class=""
+          ></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div id="" class="carousel-item">
+            <a
+              href="https://admiweb.col.gob.mx/archivos_prensa/banco_img/file_65775f7e62468_CONVOCATORIA_1.pdf"
+              target="_top"
+              ><img
+                alt=""
+                src="./Gobierno del Estado de Colima_files/file_65775f7a26468_0600202323_1.png"
+            /></a>
+            <p></p>
+          </div>
+          <div id="" class="carousel-item">
+            <img
+              alt=""
+              src="./Gobierno del Estado de Colima_files/file_657769ab58c8e_GdCBannerWebPostInforme_01.png"
+            />
+            <p></p>
+          </div>
+          <div id="" class="carousel-item">
+            <img
+              alt=""
+              src="./Gobierno del Estado de Colima_files/file_65776a3f078ed_GdCBannerWebPostInforme_02.png"
+            />
+            <p></p>
+          </div>
+          <div id="" class="carousel-item active">
+            <a
+              href="https://admiweb.col.gob.mx/archivos_prensa/banco_img/file_63c98c8257831_CONVOCATORIA_RECLUTAMIENTO2023.pdf"
+              target="_blank"
+              ><img
+                alt=""
+                src="./Gobierno del Estado de Colima_files/file_63c7193f4c85d_ConvocatoriaPilicias.jpg"
+            /></a>
+            <p></p>
+          </div>
+          <div id="" class="carousel-item">
+            <a href="https://bit.ly/3amHvnC" target="_blank"
+              ><img
+                alt=""
+                src="./Gobierno del Estado de Colima_files/file_63c5dc33c99b8_GdCBannerWebHechoEnColima.png"
+            /></a>
+            <p></p>
+          </div>
+        </div>
+
+        <a
+          class="carousel-control-prev"
+          href="https://www.col.gob.mx/#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previo</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="https://www.col.gob.mx/#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-12 contenedor-buscador-pu">
+            <div class="row">
+              <div class="col-10">
+                <h3 class="titulo-buscador-pu">
+                  <strong> Realizar tu búsqueda</strong>
+                </h3>
+                <form
+                  id="cse-search-box"
+                  method="get"
+                  style="margin: 0"
+                  action="https://www.col.gob.mx/Portal/detalle_busqueda"
+                  name="cse-search-box"
+                >
+                  <input type="hidden" name="ci_csrf_token" value="" />
+                  <div class="input-group input-group-buscador-pu">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Buscar"
+                      name="q"
+                      maxlength="50"
+                      id="search-header"
+                      aria-describedby="basic-addon1"
+                    />
+                    <button
+                      id="input-busqueda-principal-pu"
+                      class="input-group-addon busqueda-principal-icon-pu"
+                      type="submit"
+                      value="Buscar"
+                    >
+                      <i class="fa fa-chevron-right fa-2x"></i>
+                    </button>
+                  </div>
+                  <div id="msg_busqueda" class="" role="alert"></div>
+                </form>
+                <div
+                  style="display: none"
+                  id="msjbusquelinea"
+                  class="alert text-danger padding-top-bottom5"
+                  role="alert"
+                ></div>
+              </div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+          <div
+            class="col-md-5 col-12"
+            data="d-none d-md-block"
+            style="overflow: hidden"
+          >
+            <div class="container-servicios">
+              <h3 class="titulo-validacion-servicio">
+                Visita nuestros servicios
+              </h3>
+              <ul>
+                <!-- <li>
+						<div class="row">
+							<div class="col-1">
+								<i class="fa fa-check-circle-o" style="font-size:22px"></i>
+							</div>
+							<div class="col-11">
+								<a href="http://validacion.col.gob.mx/" target="_blank"  class="cursor" title="validación de documentos con firma electrónica"><strong style="font-size: 20px;">Validación de documentos <br> con firma electrónica</strong></a>
+							</div>
+						</div>
+					</li> -->
+                <li>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa fa-usd" style="font-size: 20px"></i>
+                    </div>
+                    <div class="col-11">
+                      <a
+                        href="http://www.col.gob.mx/finanzas/contenido/MTAyNjg="
+                        class="cursor"
+                        title="Pagos en línea"
+                        ><strong style="font-size: 20px"
+                          >Pagos en línea</strong
+                        ></a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-1">
+                      <i
+                        class="fa fa-shopping-cart"
+                        style="font-size: 22px; color: grey"
+                      ></i>
+                    </div>
+                    <div class="col-11">
+                      <a
+                        href="http://www.secop.col.gob.mx/"
+                        target="_blank"
+                        class="cursor"
+                        title="SECOP - licitaciones"
+                      >
+                        <strong style="font-size: 20px"
+                          >SECOP - licitaciones</strong
+                        >
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-1">
+                      <i class="fa fa-user" style="font-size: 22px"></i>
+                    </div>
+                    <div class="col-11">
+                      <a
+                        href="http://directoriointegral.col.gob.mx/"
+                        target="_blank"
+                        class="cursor"
+                        title="Directorio integral"
+                      >
+                        <strong style="font-size: 20px"
+                          >Directorio integral</strong
+                        ></a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row pt-5">
+                    <div class="col-1">
+                      &nbsp;
+                      <!-- <i class="fa fa-check-circle-o" style="font-size:22px"></i> -->
+                    </div>
+                    <div class="col-11">&nbsp;</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br class="d-none d-md-block" />
+      <div class="container contenedor-temas-interes-pu">
+        <div class="row inner-temas-interes-pu">
+          <div class="col-12"></div>
+        </div>
+      </div>
+
+      <div class="container" id="sec_tramites">
+        <br /><br />
+        <div class="row">
+          <h1 class="padding-left">Trámites y servicios más solicitados</h1>
+          <div class="col-12 separador-secciones-dark-2-pu"></div>
+          <span class="col-1 separador-secciones-dark-1-pu"></span>
+        </div>
+        <br /><br />
+        <div class="row sec_tramites">
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, persona física"
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/944"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Cambio de propietario, baja y alta de automóvil, camión o
+              camioneta nacional, persona física
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, para placas con logotipo de discapacidad motriz permanente, persona física"
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/1021"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Cambio de propietario, baja y alta de automóvil, camión o
+              camioneta nacional, para placas con logotipo de discapacidad
+              motriz permanente, persona física
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Expedición de Acta de nacimiento, matrimonio, divorcio, defunción."
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020102030200/1548"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Expedición de Acta de nacimiento, matrimonio, divorcio, defunción.
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Baja de placas del Estado de Colima registradas en el Padrón Vehicular, Persona Física."
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/1135"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Baja de placas del Estado de Colima registradas en el Padrón
+              Vehicular, Persona Física.
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Alta de automóvil, camión o camioneta nueva, persona física"
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/961"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Alta de automóvil, camión o camioneta nueva, persona física
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Cambio de propietario, baja y alta de automóvil, camión o camioneta legalizada, persona física."
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/965"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Cambio de propietario, baja y alta de automóvil, camión o
+              camioneta legalizada, persona física.
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Alta de motocicleta nueva, persona física."
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/962"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Alta de motocicleta nueva, persona física.
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, persona moral."
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/958"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Cambio de propietario, baja y alta de automóvil, camión o
+              camioneta nacional, persona moral.
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Cambio de propietario, baja y alta de motocicleta nacional, persona física."
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/964"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Cambio de propietario, baja y alta de motocicleta nacional,
+              persona física.
+            </a>
+          </div>
+          <div class="col-md-3 col-6 padding-bottom-30">
+            <a
+              class="a-blue-link"
+              title="Inscripción al Padrón de contratistas"
+              href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105260000/1061"
+            >
+              <span style="padding-right: 10px"
+                ><i class="fa fa-chevron-right"></i
+              ></span>
+              Inscripción al Padrón de contratistas
+            </a>
+          </div>
+          <div class="padding-bottom-30 responsive-width">
+            <a
+              href="https://www.col.gob.mx/Portal/Tramites"
+              title="Otros trámites"
+              class="btn btn-block custom-buttom-noticias responsive-width btn-default"
+            >
+              Otros trámites…
+            </a>
+          </div>
+        </div>
+      </div>
+      <section
+        id="destacados"
+        class="destacados-section"
+        style="padding-top: 70px"
+      >
+        <div class="container">
+          <br /><br />
+          <div class="row">
+            <h1 class="padding-left">Destacados</h1>
+            <div class="col-12 separador-secciones-dark-2-pu"></div>
+            <span class="col-1 separador-secciones-dark-1-pu"></span>
+          </div>
+          <br /><br />
+          <div class="row" id="destacados_1s">
+            <div class="col-12">
+              <div class="container-fluid no-padding-pu separador-top-5-pu">
+                <div
+                  id="destacados_slide"
+                  class="carousel slide"
+                  data-ride="carousel"
+                  data-interval="false"
+                >
+                  <ol class="carousel-indicators">
+                    <li data-target="#destacados_slide" data-slide-to="0"></li>
+                    <li data-target="#destacados_slide" data-slide-to="1"></li>
+                    <li data-target="#destacados_slide" data-slide-to="2"></li>
+                    <li data-target="#destacados_slide" data-slide-to="3"></li>
+                    <li data-target="#destacados_slide" data-slide-to="4"></li>
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+                    <div
+                      id=""
+                      class="carousel-item carousel-item-destacado active"
+                    >
+                      <a
+                        style="width: 100%"
+                        href="https://www.col.gob.mx/Portal/contenido/NTA4MTg="
+                        title="Comisión de Búsqueda"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="./Gobierno del Estado de Colima_files/imagenv2.php"
+                          border="0"
+                          alt=""
+                        />
+                      </a>
+                      <div class="carousel-caption">
+                        <h5>
+                          <a
+                            href="https://www.col.gob.mx/Portal/contenido/NTA4MTg="
+                            title="Comisión de Búsqueda"
+                          >
+                            Comisión de Búsqueda
+                          </a>
+                        </h5>
+                      </div>
+                    </div>
+                    <div id="" class="carousel-item carousel-item-destacado">
+                      <a
+                        style="width: 100%"
+                        href="https://periodicooficial.col.gob.mx/p/25122021/sup01/121122501.pdf"
+                        title="Plan Estatal de Desarrollo"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="./Gobierno del Estado de Colima_files/imagenv2(1).php"
+                          border="0"
+                          alt=""
+                        />
+                      </a>
+                      <div class="carousel-caption">
+                        <h5>
+                          <a
+                            href="https://periodicooficial.col.gob.mx/p/25122021/sup01/121122501.pdf"
+                            title="Plan Estatal de Desarrollo"
+                          >
+                            Plan Estatal de Desarrollo
+                          </a>
+                        </h5>
+                      </div>
+                    </div>
+                    <div id="" class="carousel-item carousel-item-destacado">
+                      <a
+                        style="width: 100%"
+                        href="https://www.col.gob.mx/fomentoeconomico/contenido/NDE1Nzk="
+                        title="Mejora Regulatoria"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="./Gobierno del Estado de Colima_files/imagenv2(2).php"
+                          border="0"
+                          alt=""
+                        />
+                      </a>
+                      <div class="carousel-caption">
+                        <h5>
+                          <a
+                            href="https://www.col.gob.mx/fomentoeconomico/contenido/NDE1Nzk="
+                            title="Mejora Regulatoria"
+                          >
+                            Mejora Regulatoria
+                          </a>
+                        </h5>
+                      </div>
+                    </div>
+                    <div id="" class="carousel-item carousel-item-destacado">
+                      <a
+                        style="width: 100%"
+                        href="https://www.col.gob.mx/AgendaDigital/"
+                        title="Agenda Digital"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="./Gobierno del Estado de Colima_files/imagenv2(3).php"
+                          border="0"
+                          alt=""
+                        />
+                      </a>
+                      <div class="carousel-caption">
+                        <h5>
+                          <a
+                            href="https://www.col.gob.mx/AgendaDigital/"
+                            title="Agenda Digital"
+                          >
+                            Agenda Digital
+                          </a>
+                        </h5>
+                      </div>
+                    </div>
+                    <div id="" class="carousel-item carousel-item-destacado">
+                      <a
+                        style="width: 100%"
+                        href="https://www.col.gob.mx/contraloria/contenido/Mzk0MTk="
+                        title="Declaración Patrimonial y de Intereses"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="./Gobierno del Estado de Colima_files/imagenv2(4).php"
+                          border="0"
+                          alt=""
+                        />
+                      </a>
+                      <div class="carousel-caption">
+                        <h5>
+                          <a
+                            href="https://www.col.gob.mx/contraloria/contenido/Mzk0MTk="
+                            title="Declaración Patrimonial y de Intereses"
+                          >
+                            Declaración Patrimonial y de Intereses
+                          </a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+          </div>
+          <div class="row" id="destacados_2s">
+            <div class="col-md-6 col-xs-9" style="max-height: 250px">
+              <div class="row container-destacados">
+                <div class="pb10" style="width: 95%">
+                  <h4>
+                    <a
+                      href="https://www.col.gob.mx/Portal/contenido/NTA4MTg="
+                      class="a-gray-link btn_destacados_idx"
+                      onmouseover="bntdestacados(50091,this)"
+                      id="id_destacado_50091"
+                    >
+                      <i
+                        id="50091"
+                        class="fa fa-external-link titlu-rojo-pu"
+                      ></i>
+                      Comisión de Búsqueda
+                    </a>
+                  </h4>
+                </div>
+                <div class="pb10" style="width: 95%">
+                  <h4>
+                    <a
+                      href="https://periodicooficial.col.gob.mx/p/25122021/sup01/121122501.pdf"
+                      class="a-gray-link btn_destacados_idx"
+                      onmouseover="bntdestacados(49710,this)"
+                      id="id_destacado_49710"
+                    >
+                      <i
+                        id="49710"
+                        class="fa fa-external-link titlu-rojo-pu"
+                      ></i>
+                      Plan Estatal de Desarrollo
+                    </a>
+                  </h4>
+                </div>
+                <div class="pb10" style="width: 95%">
+                  <h4>
+                    <a
+                      href="https://www.col.gob.mx/fomentoeconomico/contenido/NDE1Nzk="
+                      class="a-gray-link btn_destacados_idx"
+                      onmouseover="bntdestacados(42504,this)"
+                      id="id_destacado_42504"
+                    >
+                      <i
+                        id="42504"
+                        class="fa fa-external-link titlu-rojo-pu"
+                      ></i>
+                      Mejora Regulatoria
+                    </a>
+                  </h4>
+                </div>
+                <div class="pb10" style="width: 95%">
+                  <h4>
+                    <a
+                      href="https://www.col.gob.mx/AgendaDigital/"
+                      class="a-gray-link btn_destacados_idx"
+                      onmouseover="bntdestacados(39931,this)"
+                      id="id_destacado_39931"
+                    >
+                      <i
+                        id="39931"
+                        class="fa fa-external-link titlu-rojo-pu"
+                      ></i>
+                      Agenda Digital
+                    </a>
+                  </h4>
+                </div>
+                <div class="pb10" style="width: 95%">
+                  <h4>
+                    <a
+                      href="https://www.col.gob.mx/contraloria/contenido/Mzk0MTk="
+                      class="a-gray-link btn_destacados_idx"
+                      onmouseover="bntdestacados(42188,this)"
+                      id="id_destacado_42188"
+                    >
+                      <i
+                        id="42188"
+                        class="fa fa-external-link titlu-rojo-pu"
+                      ></i>
+                      Declaración Patrimonial y de Intereses
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="hiden" style="max-height: 250px">
+              <div class="row container-destacados"></div>
+            </div>
+            <div class="col-md-4 col-12 text-center">
+              <div class="row lyr_destacados_idx">
+                <div class="col-12 separador-padding-bottom-20" id="cont_50091">
+                  <a href="https://www.col.gob.mx/Portal/contenido/NTA4MTg=">
+                    <img
+                      class="img-fluid"
+                      alt=""
+                      src="./Gobierno del Estado de Colima_files/imagenv2.php"
+                      border="0"
+                    />
+                  </a>
+                </div>
+                <div class="col-12 separador-padding-bottom-20" id="cont_49710">
+                  <a
+                    href="https://periodicooficial.col.gob.mx/p/25122021/sup01/121122501.pdf"
+                  >
+                    <img
+                      class="img-fluid"
+                      alt=""
+                      src="./Gobierno del Estado de Colima_files/imagenv2(1).php"
+                      border="0"
+                    />
+                  </a>
+                </div>
+                <div class="col-12 separador-padding-bottom-20" id="cont_42504">
+                  <a
+                    href="https://www.col.gob.mx/fomentoeconomico/contenido/NDE1Nzk="
+                  >
+                    <img
+                      class="img-fluid"
+                      alt=""
+                      src="./Gobierno del Estado de Colima_files/imagenv2(2).php"
+                      border="0"
+                    />
+                  </a>
+                </div>
+                <div class="col-12 separador-padding-bottom-20" id="cont_39931">
+                  <a href="https://www.col.gob.mx/AgendaDigital/">
+                    <img
+                      class="img-fluid"
+                      alt=""
+                      src="./Gobierno del Estado de Colima_files/imagenv2(3).php"
+                      border="0"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="col-12 separador-padding-bottom-20 active"
+                  id="cont_42188"
+                >
+                  <a
+                    href="https://www.col.gob.mx/contraloria/contenido/Mzk0MTk="
+                  >
+                    <img
+                      class="img-fluid"
+                      alt=""
+                      src="./Gobierno del Estado de Colima_files/imagenv2(4).php"
+                      border="0"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="gobierno" class="gobierno-section" style="padding-top: 70px">
+        <div class="container" id="sec_gobierno">
+          <br /><br />
+          <div class="row">
+            <h1 class="padding-left">Gobierno</h1>
+            <div class="col-12 separador-secciones-dark-2-pu"></div>
+            <span class="col-1 separador-secciones-dark-1-pu"></span>
+          </div>
+          <br /><br />
+          <div class="row">
+            <div class="col-md-6 text-right padding-top-30 movil_gob">
+              <div class="row">
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="#" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero"> 11</b> Secretarías
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero"> 7</b> Subsecretarías
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero"> 34</b> Organismos
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero"> 8</b> Organismos Autónomos
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero"> 10</b> Municipios
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero"> 1</b> Organismos Desconcentrados
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero">1</b> H. Congreso del Estado
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero"> 1</b> Supremo Tribunal de
+                    Justicia
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+                <div
+                  class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link"
+                >
+                  <h3>
+                    <!-- <a href="" class="a-gray-link" title=""> -->
+                    <b class="gobierno-numero"> 1</b> Gobierno de la República
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 text-center d-none d-md-block">
+              <div class="row">
+                <div class="col-12 separador-padding-bottom-20">
+                  <img
+                    style="padding-top: 10px; width: 200px"
+                    class="img-fluid"
+                    src="./Gobierno del Estado de Colima_files/escudo.png"
+                    alt="Gobierno del Estado de Colima"
+                    title="Gobierno del Estado de Colima"
+                  />
+                </div>
+                <div class="col-12">
+                  <h5>
+                    <!-- <a href="https://www.col.gob.mx/Portal/escudo" class="a-gray-link" title=""> -->
+                    <span class="gobierno-numero">
+                      Escudo Oficial <br />del Estado de Colima</span
+                    >
+                    <!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+                    <!-- </a> -->
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="noticias"
+        class="noticias-section loadimagenesnoticias"
+        style="padding-top: 70px"
+      >
+        <div class="container">
+          <br /><br />
+          <div class="row">
+            <h1 class="padding-left">Noticias</h1>
+            <div class="col-12 separador-secciones-dark-2-pu"></div>
+            <span class="col-1 separador-secciones-dark-1-pu"></span>
+          </div>
+          <br /><br />
+          <div id="content_noticias_loading" style="display: none">
+            <center>
+              <img src="./Gobierno del Estado de Colima_files/undefined" />
+            </center>
+            <div class="sep10"></div>
+          </div>
+          <div id="content_noticias" style="">
+            <div class="row separador-noticias-pu">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-1 col-2 text-center">
+                    <h1 class="dia-noticia-principal-pu">26</h1>
+                    <span class="mes-noticia-principal-pu">FEB</span>
+                  </div>
+                  <div class="col-md-5 col-10">
+                    <h3 class="titulo_noticia">
+                      <b
+                        >Indira anuncia aumento salarial de 5.6% a personal
+                        sindicalizado del Gobierno de Colima</b
+                      >
+                    </h3>
+                    <br />
+                    <div class="d-none d-md-block">
+                      <p></p>
+                      <br />
+                      <a
+                        href="https://www.col.gob.mx/Portal/detalle_noticia/NTgzOTE="
+                        title=""
+                        class="btn btn-default btn-block custom-buttom-noticias col-5"
+                      >
+                        Ver más
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12 text-center">
+                    <img
+                      src="./Gobierno del Estado de Colima_files/imagenv2(5).php"
+                      class="cargada img-fluid"
+                    />
+                  </div>
+                  <div class="col-12 d-lg-none">
+                    <br />
+                    <p class="text-justify"></p>
+                    <br />
+                    <div class="text-right">
+                      <a
+                        href="https://www.col.gob.mx/Portal/detalle_noticia/NTgzOTE="
+                        title=""
+                        class="btn btn-default btn-block custom-buttom-noticias col-5"
+                      >
+                        Ver más
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br /><br /><br />
+            <div class="row hide-movil">
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <a
+                      href="https://www.col.gob.mx/Portal/detalle_noticia/NTgzOTA="
+                      title=""
+                    >
+                      <img
+                        src="./Gobierno del Estado de Colima_files/imagenv2(6).php"
+                        class="cargada img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-2 separador-top-5-pu">
+                    <h1
+                      class="dia-noticia-sec-pu"
+                      style="font-size: 30px; margin-bottom: 0px"
+                    >
+                      26
+                    </h1>
+                    <h5
+                      style="color: #ed1c24 !important"
+                      class="dia-noticia-sec-pu"
+                    >
+                      FEB
+                    </h5>
+                  </div>
+                  <div
+                    class="col-10 separador-top-5-pu titulo_listado_noticias"
+                  >
+                    <a
+                      href="https://www.col.gob.mx/Portal/detalle_noticia/NTgzOTA="
+                    >
+                      Gobernadora entrega equipo, maquinaria y herramienta de
+                      Fome...
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <a
+                      href="https://www.col.gob.mx/Portal/detalle_noticia/NTgzODc="
+                      title=""
+                    >
+                      <img
+                        src="./Gobierno del Estado de Colima_files/imagenv2(7).php"
+                        class="cargada img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-2 separador-top-5-pu">
+                    <h1
+                      class="dia-noticia-sec-pu"
+                      style="font-size: 30px; margin-bottom: 0px"
+                    >
+                      26
+                    </h1>
+                    <h5
+                      style="color: #ed1c24 !important"
+                      class="dia-noticia-sec-pu"
+                    >
+                      FEB
+                    </h5>
+                  </div>
+                  <div
+                    class="col-10 separador-top-5-pu titulo_listado_noticias"
+                  >
+                    <a
+                      href="https://www.col.gob.mx/Portal/detalle_noticia/NTgzODc="
+                    >
+                      Jugadores campeones de Cocoteros reciben premios
+                      individuale...
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <a
+                      href="https://www.col.gob.mx/Portal/detalle_noticia/NTgzODY="
+                      title=""
+                    >
+                      <img
+                        src="./Gobierno del Estado de Colima_files/imagenv2(8).php"
+                        class="cargada img-fluid"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-2 separador-top-5-pu">
+                    <h1
+                      class="dia-noticia-sec-pu"
+                      style="font-size: 30px; margin-bottom: 0px"
+                    >
+                      26
+                    </h1>
+                    <h5
+                      style="color: #ed1c24 !important"
+                      class="dia-noticia-sec-pu"
+                    >
+                      FEB
+                    </h5>
+                  </div>
+                  <div
+                    class="col-10 separador-top-5-pu titulo_listado_noticias"
+                  >
+                    <a
+                      href="https://www.col.gob.mx/Portal/detalle_noticia/NTgzODY="
+                    >
+                      Este lunes, 4, 131 estudiantes tecomenses reciben "Mi
+                      ColiBe...
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <br />
+                <a
+                  href="https://www.col.gob.mx/Portal/listado_noticias/"
+                  title=""
+                  class="btn btn-default custom-buttom-noticias responsive-width col-5"
+                >
+                  Listado de noticias
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script type="text/javascript">
+        var PATH = "https://www.col.gob.mx/";
+        $(function () {
+          $.ajax({
+            url: PATH + "index.php/Portal/get_noticiaportal_ajax/",
+            dataType: "json",
+            before: function () {
+              $("#content_noticias").html("");
+            },
+            success: function (data) {
+              var decode = window.atob(data.respuesta);
+              $("#content_noticias_loading").hide();
+              $("#content_noticias").show();
+              $("#content_noticias").html(decode);
+              setTimeout(function () {
+                $.each($("#noticias img"), function (index, value) {
+                  // creo una imagen y le asigno el fuente de la imagen final
+                  var imgFinal = new Image();
+                  imgFinal.src = $(this).attr("src2");
+
+                  imgFinal.onload = function () {
+                    $(imgFinal).addClass("cargada");
+                    $(imgFinal).addClass("img-fluid");
+                  };
+                  $(this).replaceWith(imgFinal);
+                });
+              }, 1000);
+            },
+            error: function (e) {
+              $("#content_noticias").html("");
+            },
+          });
+        });
+      </script>
+      <section
+        id="gabinete"
+        class="gabinetes-section"
+        style="padding-top: 70px"
+      >
+        <div class="container hide-movil">
+          <br /><br />
+          <div class="row">
+            <h1>Gabinete</h1>
+            <div class="col-12 separador-secciones-dark-2-pu"></div>
+            <span class="col-1 separador-secciones-dark-1-pu"></span>
+          </div>
+          <br /><br />
+          <h3>Secretarías</h3>
+          <div class="row separador-gabinete-imagen-pu">
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/i.vizcaino.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTA="
+                        >Licda. Indira Vizcaíno Silva</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTA="
+                        >Gobernadora del Estado de Colima</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/l.jurado.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTE="
+                        >Ing. Eduardo Jurado Escamilla</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTE="
+                        >Oficina de la Gubernatura</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/Eloy-Garcia-Alcaraz.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/"
+                        >Lic. Alberto Eloy García Alcaraz</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/"
+                        >Secretario General de Gobierno</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/f.verduzco.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTM="
+                        >Cp. Fabiola Verduzco Aparicio</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTM="
+                        >Secretaria de Planeación, Finanzas y Administración</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/Gdc_SecSeguridad.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTQ="
+                        >Capitán de Navío IM. DEM. Héctor Alfredo Castillo
+                        Báez</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTQ="
+                        >Secretario de Seguridad Pública</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/GdC_FranciscoRodriguez.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTU="
+                        >Lic. Francisco Javier Rodríguez García</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTU="
+                        >Secretario de Desarrollo Económico</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/j.espinoza.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTY="
+                        >Dra. Martha Janeth Espinosa Mejía</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTY="
+                        >Secretaria de Salud</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/a.nunez.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTc="
+                        >Prof. Adolfo Núñez González</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTc="
+                        >Secretario de Educación y Cultura</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/m.neri.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTg="
+                        >Arq. Marisol Neri León</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNTg="
+                        >Secretaria de Infraestructura, Desarrollo Urbano y
+                        Movilidad</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/Zalia.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/"
+                        >Licda. Zalia María Gutiérrez Verduzco</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/"
+                        >Encargada de despacho de la Secretaría de Bienestar
+                        Inclusión Social y Mujeres</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/l.uribe.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjA"
+                        >Mtra. Isela Guadalupe Uribe Alvarado</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjA"
+                        >Contralora General del Estado</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/r.rubio.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjE="
+                        >Lic. Roberto Rubio Torres</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjE="
+                        >Consejero Jurídico del Poder Ejecutivo del Estado</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Subsecretarías</h3>
+          <div class="row separador-gabinete-imagen-pu">
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/f.pinto.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjI="
+                        >Lic. Francisco Javier Pinto</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjI="
+                        >Subsecretario del Trabajo</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/j.padilla.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjM="
+                        >Ing. Jorge Padilla Castillo</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjM="
+                        >Subsecretario de Turismo</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/j.sotela.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjQ="
+                        >Ing. Jaime Enrique Sotelo García</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjQ="
+                        >Subsecretario de Desarrollo Rural</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/j.romero.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjU="
+                        >Lic. José Gerardo Romero Quezada</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjU="
+                        >Subsecretario de las Juventudes</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/ARMANDO-GONZALEZ.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/"
+                        >Ing. Armando González Manzo</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/"
+                        >Encargado de despacho de la Subsecretaría de
+                        Movilidad</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/m.zizumbo.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjg="
+                        >Lic. Emiliano Zizumbo Quintanilla</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjg="
+                        >Subsecretario de Cultura</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <!-- Row -->
+              <div class="row">
+                <div class="col-md-8 col-centered">
+                  <img
+                    src="./Gobierno del Estado de Colima_files/v.torrero.png"
+                    alt="wrapkit"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="pt-2">
+                    <h6 class="mt-4 font-weight-medium mb-0 bold">
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjk="
+                        >Cp. Víctor Manuel Torrero Enríquez</a
+                      >
+                    </h6>
+                    <p>
+                      <a href="https://www.col.gob.mx/Portal/contenido/NTAxNjk="
+                        >Subsecretario de Administración</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="redes">
+        <div
+          class="lyr_contenido container padding-top-bottom-50 d-none d-lg-block"
+        >
+          <div class="row">
+            <h1>Visita nuestras redes sociales</h1>
+            <div class="col-12 separador-secciones-dark-2-pu"></div>
+            <span class="col-1 separador-secciones-dark-1-pu"></span>
+          </div>
+          <br /><br />
+          <div style="background: #4b4f54" class="row">
+            <div class="col-md-6">
+              <h4
+                style="
+                  color: white !important;
+                  padding-top: 7px;
+                  padding-bottom: 4px;
+                  font-weight: bold;
+                "
+              >
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                Facebook
+              </h4>
+            </div>
+            <div class="col-md-6">
+              <h4
+                class=""
+                style="
+                  color: white !important;
+                  padding-top: 7px;
+                  padding-bottom: 4px;
+                  font-weight: bold;
+                "
+              >
+                <i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter
+              </h4>
+            </div>
+          </div>
+          <div class="row" style="max-height: 700px; background: #f6f6f6">
+            <div
+              class="col-6"
+              style="max-height: 650px; overflow-y: scroll; padding-left: 50px"
+            >
+              <div
+                class="fb-page"
+                data-href="https://www.facebook.com/gobiernocolima"
+                data-tabs="timeline"
+                data-width="800"
+                data-height="650"
+                data-small-header="true"
+                data-adapt-container-width="true"
+                data-hide-cover="false"
+                data-show-facepile="false"
+              >
+                <blockquote
+                  cite="https://www.facebook.com/gobiernocolima"
+                  class="fb-xfbml-parse-ignore"
+                >
+                  <a href="https://www.facebook.com/gobiernocolima"
+                    >Gobierno Colima</a
+                  >
+                </blockquote>
+              </div>
+            </div>
+            <div
+              class="col-6"
+              style="max-height: 650px; overflow-y: scroll; padding-left: 50px"
+            >
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/gobiernocolima?ref_src=twsrc%5Etfw"
+                >Tweets by gobiernocolima</a
+              >
+              <script
+                async=""
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="lyr_contenido container padding-top-bottom-50 d-block d-sm-none"
+        >
+          <div class="row">
+            <h1>Visita nuestras redes sociales</h1>
+            <div class="col-12 separador-secciones-dark-2-pu"></div>
+            <span class="col-1 separador-secciones-dark-1-pu"></span>
+          </div>
+          <br /><br />
+          <div class="row text-center">
+            <div class="col">
+              <a href="https://www.facebook.com/gobiernocolima/"
+                ><i class="fa fa-facebook fa-2x"></i
+              ></a>
+            </div>
+            <div class="col">
+              <a href="https://www.facebook.com/gobiernocolima/"
+                ><i class="fa fa-twitter fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container" id="sec_atencion" style="padding-top: 40px">
+        <br /><br />
+        <br />
+        <div class="row texto-blanco-pu">
+          <h1 class="padding-left">¡Contáctanos!</h1>
+          <div class="col-12 separador-secciones-dark-2-pu"></div>
+          <span class="col-1 separador-secciones-dark-1-pu"></span>
+        </div>
+        <br />
+        <div class="row section-contacto-pu">
+          <div class="titulo_blanco size30 text-center bold col-centered">
+            Atención Ciudadana
+          </div>
+          <div class="sep5"></div>
+          <div class="col-md-6 text-center contacto-section-separador">
+            <div class="row">
+              <div class="sep10"></div>
+              <div class="col-12">
+                <div
+                  style="display: none"
+                  class="alert msg-contacto"
+                  role="alert"
+                >
+                  <span></span>
+                </div>
+                <form id="frmContacto" name="frmContacto">
+                  <div class="input-group pb10">
+                    <span
+                      class="input-group-addon adaptaraddon"
+                      id="basic-addon1"
+                      ><i class="fa fa-user" style="padding-right: 5px"> </i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="* Nombre"
+                      style="font-style: italic"
+                    />
+                    <span id="msg_nombre"></span>
+                  </div>
+                  <div class="input-group pb10">
+                    <span
+                      class="input-group-addon adaptaraddon"
+                      id="basic-addon1"
+                      ><i class="fa fa-user" style="padding-right: 5px"> </i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="ap1"
+                      name="ap1"
+                      placeholder="* Primer Apellido"
+                      style="font-style: italic"
+                    />
+                    <span id="msg_ap1"></span>
+                  </div>
+                  <div class="input-group pb10">
+                    <span
+                      class="input-group-addon adaptaraddon"
+                      id="basic-addon1"
+                      ><i class="fa fa-user" style="padding-right: 5px"> </i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="ap2"
+                      name="ap2"
+                      placeholder=" Segundo Apellido"
+                      style="font-style: italic"
+                    />
+                    <span id="msg_ap2"></span>
+                  </div>
+                  <div class="input-group pb10">
+                    <select
+                      id="sexo"
+                      name="sexo"
+                      class="form-control pb10"
+                      style="padding-top: 10px; font-style: italic"
+                    >
+                      <option value="nada" selected="">
+                        Seleccionar el sexo
+                      </option>
+                      <option value="Hombre">Hombre</option>
+                      <option value="Mujer">Mujer</option>
+                    </select>
+                    <span id="msg_sexo"></span>
+                  </div>
+                  <div class="input-group pb10">
+                    <span
+                      class="input-group-addon adaptaraddon"
+                      id="basic-addon1"
+                      ><i class="fa fa-phone" style="padding-right: 5px"> </i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="Teléfono"
+                      style="font-style: italic"
+                    />
+                    <span id="msg_nombre"></span>
+                  </div>
+                  <div class="input-group pb10">
+                    <span
+                      class="input-group-addon adaptaraddon"
+                      id="basic-addon1"
+                      ><i class="fa fa-envelope"> </i
+                    ></span>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="* Correo "
+                      style="font-style: italic"
+                    />
+                    <span id="msg_mail"></span>
+                  </div>
+
+                  <div class="input-group pb10">
+                    <select
+                      id="procedencia"
+                      name="procedencia"
+                      class="form-control pb10"
+                      style="padding-top: 10px; font-style: italic"
+                    >
+                      <option value="nada" selected="">
+                        Seleccionar la localidad
+                      </option>
+                      <option value="Armería">Armería</option>
+                      <option value="Colima">Colima</option>
+                      <option value="Comala">Comala</option>
+                      <option value="Coquimatlán">Coquimatlán</option>
+                      <option value="Cuauhtémoc">Cuauhtémoc</option>
+                      <option value="Ixtlahuacán">Ixtlahuacán</option>
+                      <option value="Manzanillo">Manzanillo</option>
+                      <option value="Minatitlán">Minatitlán</option>
+                      <option value="Tecomán">Tecomán</option>
+                      <option value="Villa de Álvarez">Villa de Álvarez</option>
+                    </select>
+                    <span id="msg_sexo"></span>
+                  </div>
+
+                  <div class="input-group pb10">
+                    <select
+                      id="asunto"
+                      name="asunto"
+                      class="form-control pb10"
+                      style="padding-top: 10px; font-style: italic"
+                    >
+                      <option value="nada" selected="">
+                        Seleccionar el tema
+                      </option>
+                      <option value="comentario">Comentario</option>
+                      <option value="sugerencia">Sugerencia</option>
+                      <option value="petición">Petición</option>
+                    </select>
+                    <span id="msg_asunto"></span>
+                  </div>
+                  <div class="form-group pb10">
+                    <textarea
+                      class="form-control"
+                      id="mensaje"
+                      name="mensaje"
+                      placeholder="Cuál es tu requerimiento"
+                      style="font-style: italic"
+                    ></textarea>
+                    <span id="msg_mensaje"></span>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <div
+                          class="g-recaptcha"
+                          data-sitekey="6LcJhlgUAAAAAMuyT1TGklVsDJvfSspi1DQZxQg4"
+                          style="
+                            transform: scale(0.77);
+                            -webkit-transform: scale(0.77);
+                            transform-origin: 0 0;
+                            -webkit-transform-origin: 0 0;
+                          "
+                        >
+                          <div style="width: 304px; height: 78px">
+                            <div>
+                              <iframe
+                                title="reCAPTCHA"
+                                width="304"
+                                height="78"
+                                role="presentation"
+                                name="a-1lwrhkhc8yv6"
+                                frameborder="0"
+                                scrolling="no"
+                                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                                src="./Gobierno del Estado de Colima_files/anchor.html"
+                              ></iframe>
+                            </div>
+                            <textarea
+                              id="g-recaptcha-response"
+                              name="g-recaptcha-response"
+                              class="g-recaptcha-response"
+                              style="
+                                width: 250px;
+                                height: 40px;
+                                border: 1px solid rgb(193, 193, 193);
+                                margin: 10px 25px;
+                                padding: 0px;
+                                resize: none;
+                                display: none;
+                              "
+                            ></textarea>
+                          </div>
+                          <iframe
+                            style="display: none"
+                            src="./Gobierno del Estado de Colima_files/saved_resource(3).html"
+                          ></iframe>
+                        </div>
+                        <span id="msg_capcha"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-4" id="btn_respFix">
+                      <div class="form-group">
+                        <button
+                          style="cursor: pointer"
+                          type="button"
+                          id="btn_atencionc"
+                          class="btn btn-danger col-12 boton-hover pull-right"
+                        >
+                          Enviar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 contacto-section-separador">
+            <!--<div class="row">
+				<div class="sep10"></div>
+				<div class="col-12 separador-padding-bottom-20">
+					<div class="titulo_blanco size20 bold">Descarga nuestra app Trámites GOBCOL</div>
+					<div class="row pt-4">
+						<div class="col-6">
+							<a class="btn btn-block custom-buttom-noticias responsive-width  " href="https://apps.apple.com/us/app/tr%C3%A1mites-gobcol/id1437562414?l=es&amp;ls=1" target="_blank" title="IOS"> <i class="fa fa-apple"></i> </a></div>
+						<div class="col-6">
+							<a class="btn btn-block custom-buttom-noticias responsive-width " href="https://play.google.com/store/apps/details?id=mx.gob.col.icsic.TramitesGobCol&amp;hl=es_419" target="_blank" title="android"> <i class="fa fa-android"></i> </a></div>
+					</div>
+
+				</div>
+			</div>-->
+
+            <div class="row" id="lyr_aciudadana">
+              <div class="col-12 texto-blanco">
+                <div class="sep10"></div>
+                <div class="titulo_blanco size18 bold">Nuestra dirección</div>
+                <div class="row">
+                  <div class="col-12 lyr_mapa" style="height: 240px">
+                    <br />
+                    <iframe
+                      src="./Gobierno del Estado de Colima_files/embed.html"
+                      width="600"
+                      height="450"
+                      frameborder="0"
+                      style="border: 0"
+                      allowfullscreen=""
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <p>&nbsp;</p>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <a
+                  href="https://www.col.gob.mx/BuzonQuejas"
+                  title="Buzón de quejas virtual"
+                >
+                  <img
+                    src="./Gobierno del Estado de Colima_files/contraloria.jpg"
+                    class="img-fluid"
+                    style="padding-top: 15px"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="sep10"></div>
+        </div>
+      </div>
+      <div class="sep5"></div>
+
+      <div
+        class="modal fade"
+        id="mdlMensaje"
+        name="mdlMensaje"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+        style="padding-top: 15%; overflow-y: visible"
+      >
+        <div class="modal-dialog modal-m">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 style="margin: 0"></h3>
+            </div>
+            <div class="modal-body">
+              <div
+                class="progress progress-striped active"
+                style="margin-bottom: 0"
+              >
+                <div class="progress-bar" style="width: 100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal-mensajes-pu"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalGenericaPu"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-titulo-pu"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modal-contenido-pu"></div>
+          <div class="modal-footer" id="modal-footer-pu">
+            <button
+              type="button"
+              class="btn btn-secondary btn-danger"
+              data-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <footer class="footer">
+      <div class="container-fluid footer-backgroundcolor-pu">
+        <div class="container-fluid footer-back-dark">&nbsp;</div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-12 container-img-footer">
+              <div class="row">
+                <div class="col-md-12 col-12">
+                  <img
+                    class="img-fluid"
+                    src="./Gobierno del Estado de Colima_files/logo-colima-2021.png"
+                    alt="Colima"
+                  />
+                </div>
+                <div class="col-md-12 col-12 hidden-sm-down">
+                  <p class="footer-texto-pu">
+                    Complejo Administrativo del Gobierno del Estado 3er. Anillo
+                    Periférico, Esq. Ejército Mexicano S/N. Colonia el Diezmo.
+                    C.P. 28010, Colima, Colima, México. Tel. (312) 316 2000
+                  </p>
+                </div>
+                <div class="col-12 footer-link-left footer-links-color-pu">
+                  <a
+                    class="linksfooter"
+                    href="http://www.col.gob.mx/Portal/mapa_sitio"
+                    target="_self"
+                    title=""
+                    >Mapa del sitio</a
+                  >
+                  <br />
+                  <a
+                    target="_blank"
+                    class="linksfooter"
+                    href="http://www.col.gob.mx/Portal/contenido/MTA3MzI="
+                    title="Políticas de uso"
+                    >Políticas de uso y privacidad</a
+                  >
+                  <!-- http://www.col.gob.mx/portal/contenido/OTQ5MA== -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="row footer-social-separador-pu">
+                <div class="col-12 text-center footer-social-separador-pu">
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <span class="footer-icon-separador-pu"></span
+                      ><a
+                        href="https://www.facebook.com/gobiernocolima/"
+                        target="_blank"
+                        title="Facebook"
+                        ><i
+                          class="fa fa-facebook-official footer-facebook fa-3x"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="footer-icon-separador-pu"></span
+                      ><a
+                        href="https://twitter.com/gobiernocolima"
+                        target="_blank"
+                        title="Twitter"
+                        ><i
+                          class="fa fa-twitter-square footer-twitter fa-3x"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="footer-icon-separador-pu"></span
+                      ><a
+                        href="https://www.youtube.com/user/GobiernoColima"
+                        target="_blank"
+                        title="Youtube"
+                        ><i
+                          class="fa fa-youtube-play footer-youtube fa-3x"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </li>
+                    <!-- <li class="list-inline-item "><span class="footer-icon-separador-pu"></span><a href="http://gobiernocolima.blogspot.mx/" target="_blank" title="Blogspot"><i class="fa fa-rss-square footer-rss fa-3x" aria-hidden="true"></a></i></li> -->
+                    <!-- <li class="list-inline-item "><span class="footer-icon-separador-pu"></span><a href="https://soundcloud.com/gobcolradio/" target="_blank" title="SoundCloud"><i class="fa fa-soundcloud footer-soundcloud fa-3x" aria-hidden="true"></a></i></li> -->
+                  </ul>
+                </div>
+                <div class="col-12">
+                  <div class="row padding-left-30">
+                    <div class="col text-center">
+                      <i class="fa fa-download fa-2x"></i><br />
+                      <a
+                        href="http://www.col.gob.mx/Portal/intranet"
+                        target="_blank"
+                        title="Intranet"
+                        class="linksfooter"
+                        >Intranet</a
+                      >
+                    </div>
+                    <!-- <div class="col text-center">
+                        		 <i class="fa fa-qrcode fa-2x" aria-hidden="true"></i><br>
+			   			 	  		<a href="http://www.firel.col.gob.mx/" target="_blank" title="Validación e.firma SAT" class="linksfooter">Validaci&oacute;n <br>e.firma SAT</a> 
+                        	</div> -->
+                    <div class="col text-center">
+                      <i class="fa fa-user fa-2x" aria-hidden="true"></i><br />
+                      <a
+                        href="http://directoriointegral.col.gob.mx/"
+                        target="_blank"
+                        title="Directorio integral"
+                        class="linksfooter"
+                        >Directorio <br />
+                        integral</a
+                      >
+                    </div>
+                    <div class="col text-center">
+                      <i
+                        class="fa fa-check-circle-o fa-2x"
+                        aria-hidden="true"
+                      ></i
+                      ><br />
+                      <a
+                        href="http://www.firel.col.gob.mx/"
+                        target="_blank"
+                        title="Validación de documentos con firma electrónica"
+                        class="linksfooter"
+                        >Validación &nbsp; <br />
+                        de documentos</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="./Gobierno del Estado de Colima_files/tether.min.js.descarga"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./Gobierno del Estado de Colima_files/bootstrap.min.js.descarga"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./Gobierno del Estado de Colima_files/sweetalert2.all.js.descarga"
+    ></script>
+    <!-- Font awesome -->
+    <script type="text/javascript">
+      var site_url = "https://www.col.gob.mx/index.php";
+    </script>
+    <script
+      src="./Gobierno del Estado de Colima_files/customjs.js.descarga"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./Gobierno del Estado de Colima_files/menu-fixed-top.js.descarga"
+      charset="utf-8"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./Gobierno del Estado de Colima_files/jquery-ui.min.js.descarga"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./Gobierno del Estado de Colima_files/jquery.validate.min.js.descarga"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./Gobierno del Estado de Colima_files/additional-methods.js.descarga"
+      type="text/javascript"
+    ></script>
+    <script src="./Gobierno del Estado de Colima_files/api.js.descarga"></script>
+    <script
+      src="./Gobierno del Estado de Colima_files/enviar-email.js.descarga"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./Gobierno del Estado de Colima_files/busquedageneral.js.descarga"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./Gobierno del Estado de Colima_files/destacados.js.descarga"
+      type="text/javascript"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./Gobierno del Estado de Colima_files/colgob.js.descarga"
+    ></script>
+
+    <br /><i
+      class="fa fa-bullseye"
+      aria-hidden="true"
+      style="color: white; position: absolute; font-size: 8px"
+    ></i>
+    <div
+      style="
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(204, 204, 204);
+        box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+        position: absolute;
+        transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2000000000;
+        left: 0px;
+        top: -10000px;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 2000000000;
+          background-color: rgb(255, 255, 255);
+          opacity: 0.05;
+        "
+      ></div>
+      <div
+        class="g-recaptcha-bubble-arrow"
+        style="
+          border: 11px solid transparent;
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          pointer-events: none;
+          margin-top: -11px;
+          z-index: 2000000000;
+        "
+      ></div>
+      <div
+        class="g-recaptcha-bubble-arrow"
+        style="
+          border: 10px solid transparent;
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          pointer-events: none;
+          margin-top: -10px;
+          z-index: 2000000000;
+        "
+      ></div>
+      <div style="z-index: 2000000000; position: relative">
+        <iframe
+          title="el desafío de recaptcha caduca dentro de dos minutos"
+          name="c-1lwrhkhc8yv6"
+          frameborder="0"
+          scrolling="no"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+          src="./Gobierno del Estado de Colima_files/bframe.html"
+          style="width: 100%; height: 100%"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

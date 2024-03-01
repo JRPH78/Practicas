@@ -1,0 +1,29 @@
+// JavaScript Document
+function Inicializa(){            
+    $('#div_calendario').load('vista/v_calendario.php',function(i){
+        Muestra_Calendario();
+    });        
+}
+
+function Cambia_Fecha(){
+	var Fecha= $('#CmbFecha').val().split("|");
+	
+	$('#mes').val(Fecha[0]);
+	$('#anio').val(Fecha[1]);
+	
+	Muestra_Calendario();
+}
+
+function Muestra_Calendario(){            
+    Loading();
+    var dia=$('#dia').val();
+    var mes=$('#mes').val();
+    var anio=$('#anio').val();    
+    var parametros='opcion=muestra_calendario';
+    parametros+='&dia='+dia;
+    parametros+='&mes='+mes;
+    parametros+='&anio='+anio;        
+    var html=$.ajax({type: "POST",url:"ajax.php",data: parametros,cache: false,async: false}).responseText;        
+    $('#calendario_div').html(html);
+    Cierra_Loading();
+}

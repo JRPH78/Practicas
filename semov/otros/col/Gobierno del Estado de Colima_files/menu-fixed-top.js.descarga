@@ -1,0 +1,25 @@
+/*Jquery personalizados*/
+jQuery(document).ready(function($) {
+  /*Fixed menu top scroll*/
+    $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    $(".container-fluid.navbar-container-pu").addClass("fixed-top");
+    //$("#carouselExampleIndicators").css({"margin-top":"90px"});
+    if (scroll > 5) {
+            $(".container-fluid.navbar-container-pu").addClass('menu-background-transparent-pu',{duration:500});
+          //$(".container-fluid.navbar-container-pu.fixed-top").addClass('menu-animation-scroll-pu');
+          //console.log(scroll);
+       }else{
+          //console.log(scroll);
+          $(".container-fluid.navbar-container-pu").removeClass("fixed-top");
+          $(".container-fluid.navbar-container-pu.fixed-top").removeClass('menu-background-transparent-pu');
+       }
+    });
+    /*Fixed menu top scroll*/
+  
+
+
+  //Agregar padding top para acomodar con las anclas
+  $("#sec_atencion").css({'padding-top': '40px'});
+  //$("#sec_atencion, #destacados, #multimedia, #quienes_somos, #programas, #noticias").css({'padding-top': '40px'});
+});

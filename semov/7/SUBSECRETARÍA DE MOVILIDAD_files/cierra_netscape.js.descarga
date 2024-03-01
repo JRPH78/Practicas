@@ -1,0 +1,24 @@
+// JavaScript Document
+(function($){    
+    $.fn.CierraNetscape=function(Modal){
+        var html='<div id="DivNetscape">';
+			html+='<img src="lib/cierra_netscape/images/mantenimiento.png" width="529" height="146" border="0" usemap="#Map" />';
+			html+='<map name="Map" id="Map">';
+			html+='<area shape="rect" coords="145,89,263,107" href="http://www.mozilla.org/en-US/firefox/new/" target="_blank" />';
+			html+='<area shape="rect" coords="284,88,418,107" href="https://www.google.com.mx/chrome/?brand=ECSB&amp;installdataindex=no-apps-no-promo&amp;hl=es-419&amp;gclid=CMXsq_n-xa0CFcYZQgodWleqAw" target="_blank" />';
+			html+='</map>';
+		html+='</div>';		
+		$('body').append(html);
+        $('#DivNetscape').modal({
+                zIndex:9900,
+                opacity: 90,
+                escClose:false,
+                modal: true,
+				onClose: function(){                
+					$.modal.close();
+					$("#DivNetscape").empty();
+					$("#DivNetscape").remove();
+				}
+        });
+    }        
+})(jQuery);

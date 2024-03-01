@@ -1,0 +1,55 @@
+$(document).ready(function() {
+
+
+    // setTimeout(function() {
+    //     $('div.row.container-destacados a').removeAttr('href');
+    //     $('div.row.container-destacados a').addClass('cursor');
+    //     $('div.row.container-campanas a').removeAttr('href');
+    //     $('div.row.container-campanas a').addClass('cursor');
+    // });
+
+
+    //Agregar padding top para acomodar con las anclas
+    $("#destacados, #multimedia, #quienes_somos, #programas, #noticias").css({
+        'padding-top': '70px'
+    });
+});
+
+// var url_portal = 'http://col.gob.mx/';
+
+function MostrarMasDestacados() {
+
+    $(".container-destacados .num_destacado:first").hide();
+    var tag = $(".container-destacados .num_destacado:first").clone();
+    $(".container-destacados .num_destacado:first").remove();
+    $(".container-destacados").append(tag);
+    $(".container-destacados .num_destacado:hidden:first").show();
+
+}
+
+function MostrarMenosDestacados() {
+
+    var tag = $(".container-destacados .num_destacado:last").clone();
+    $(".container-destacados .num_destacado:last").remove();
+    $(".container-destacados").prepend(tag);
+    $(".container-destacados .num_destacado:first").show();
+    $(".container-destacados .num_destacado:visible:last").hide();
+}
+
+
+
+function bntdestacados(key, $this) {
+    // setTimeout(function() {
+        var id = key;
+        $(".row.lyr_destacados_idx > div").removeClass('active');
+        $(".row.lyr_destacados_idx > div#cont_"+id).addClass('active');
+    // }, 2000);
+}
+
+function bntcampanas(key) {
+    // setTimeout(function() {
+        var id = key;
+        $(".row.lyr_campanas_idx > div").removeClass('active');
+        $(".row.lyr_campanas_idx > div#cont_"+id).addClass('active');
+    // }, 2000);
+}

@@ -1,0 +1,164 @@
+$(document).ready(function() {
+	// var site_url = 'http://www.col.gob.mx/portal-2017/index.php/';
+        $('#telefono').keyup(function (){
+            this.value = (this.value + '').replace(/[^0-9]/g, '');
+         });
+	function validateEmail(email) {
+    	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    	return re.test(email);
+	}
+	$("#btn_atencionc").on('click', function() {
+		nombre = $("#nombre").val();
+		ap1 = $("#ap1").val();
+		ap2 = $("#ap2").val();
+		email = $("#email").val();
+        telefono = $("#telefono").val();
+		var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+		mensaje = $("#mensaje").val();
+        $(".alert.msg-contacto").show('slow');
+		if (nombre == "") {
+			$(".alert.msg-contacto").show('slow');
+			$(".alert.msg-contacto").html("<strong>Alerta!</strong> Nombre obligatorio.").addClass('alert-danger');
+			}else if(ap1==""){
+				$(".alert.msg-contacto").html("<strong>Alerta!</strong> El primer apellido es requerido.").addClass('alert-danger');
+			}else if(!validateEmail(email)){
+				$(".alert.msg-contacto").html("<strong>Alerta!</strong> Ingresar un correo válido.").addClass('alert-danger');
+            }else if(mensaje == ""){
+				$(".alert.msg-contacto").html("<strong>Alerta!</strong> Mensaje  obligatorio.").addClass('alert-danger');
+			}else{
+				$.ajax({url: site_url + '/Portal/enviar_correo',
+		        type: 'POST',
+		        //cache: false,
+		        dataType:"json",
+		        data: $('#frmContacto').serialize(),
+		        beforeSend: function() {
+				    //xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+				    $("#btn_atencionc").attr('disabled', 'disabled').html("Enviando...");
+					$("#nombre").prop('disabled', true);
+					$("#ap1").prop('disabled', true);
+					$("#ap2").prop('disabled', true);
+					$("#sexo").prop('disabled', true);
+				    $("#email").prop('disabled', true);
+				    $("#telefono").prop('disabled', true);
+				    $("#asunto").prop('disabled', true);
+					$("#mensaje").prop('disabled', true);
+					$("#procedencia").prop('disabled', true);
+				},
+                        success:  function (e) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                        switch (e.status) {
+                            case "Capcha":
+                            		$(".alert.msg-contacto").html("<strong>Alerta!</strong>&nbsp;"+ e.msg).addClass('alert-danger');
+                                    $("#btn_atencionc").attr('disabled', false).html("Enviar");
+                                    break;
+                            case "Error":
+                                    // $(".alert.msg-contacto").html("<strong>Alerta!</strong>&nbsp; ".Llenar los campos indicados con un (*).").addClass('alert-danger');
+                                    $(".alert.msg-contacto").html("<strong>Alerta!</strong>&nbsp;"+e.status).addClass('alert-danger');
+                                    $("#btn_atencionc").attr('disabled', false).html("Enviar");
+                                    break;
+                          default:
+                                    $(".alert.msg-contacto").html("<strong>Éxito!</strong>&nbsp; Su mensaje se ha enviado correctamente.").addClass('alert-success').removeClass('alert-danger');
+                                    $("#btn_atencionc").attr('disabled', false).html("Enviar");
+									$("#nombre").val("");
+									$("#ap1").val("");
+									$("#ap2").val("");
+									$("#sexo").val("");
+                                    $("#telefono").val("");
+                                    $("#asunto").val("");
+                                    $("#email").val("");
+									$("#mensaje").val("");
+									$("#procedencia").val("");
+                                    break;
+                            }
+                        },
+                        complete:function(e){
+							$("#nombre").prop('disabled', false);
+							$("#ap1").prop('disabled', false);
+							$("#ap2").prop('disabled', false);
+							$("#sexo").prop('disabled', false);
+							$("#email").prop('disabled', false);
+							$("#telefono").prop('disabled', false);
+							$("#asunto").prop('disabled', false);
+							$("#mensaje").prop('disabled', false);
+							$("#procedencia").prop('disabled', false);
+							$("#btn_atencionc").prop('disabled', false);
+                                    grecaptcha.reset();
+                                    setTimeout( function(){ $(".alert.msg-contacto").hide('slow');} , 5000);
+
+
+                        }
+                
+            });
+        }
+	});//Boton
+
+	$("#btn_atencioncDatosA").on('click', function() {
+	
+		telefono = $("#telefono").val();
+		email = $("#email").val();
+		genero = $("#genero").val();
+		profesion = $("#profesion").val();
+		var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+		mensaje = $("#mensaje").val();
+
+		
+		if(!validateEmail(email)){
+
+				$(".alert.msg-contacto").html("<strong>Alerta!</strong> Ingresar un correo válido.").addClass('alert-danger');
+
+			}else if(mensaje == ""){
+				$(".alert.msg-contacto").html("<strong>Alerta!</strong> Mensaje  obligatorio.").addClass('alert-danger');
+			}else{
+				$.ajax({url: site_url + '/DatosAbiertos/enviar_correo',
+		        type: 'POST',
+		        //cache: false,
+		        dataType:"json",
+		        data: $('#frmContactoDA').serialize(),
+		        beforeSend: function() {
+				    //xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+				    $("#btn_atencioncDatosA").attr('disabled', 'disabled').html("Enviando...");
+				    $("#telefono").prop('disabled', true);
+				    $("#email").prop('disabled', true);
+				    $("#genero").prop('disabled', true);
+				    $("#profesion").prop('disabled', true);
+				    $("#mensaje").prop('disabled', true);
+				},
+                success:  function (e) { //una vez que el archivo recibe el request lo procesa y lo devuelve
+                	
+                	switch (e.status) {
+                		case "Capcha":
+                			
+                			$(".alert.msg-contacto").html("<strong>Alerta!</strong>&nbsp;"+ e.msg).addClass('alert-danger');
+			        		$("#btn_atencioncDatosA").attr('disabled', false).html("Enviar");
+			        		break;
+			        	case "Error":
+			        		$(".alert.msg-contacto").html("<strong>Alerta!</strong>&nbsp; Llenar los campos indicados con un (*).").addClass('alert-danger');
+			        		$("#btn_atencioncDatosA").attr('disabled', false).html("Enviar");
+			        		break;
+			        	case "OK":
+			        		$(".alert.msg-contacto").html("<strong>Exito!</strong>&nbsp;"+e.msg).addClass('alert-success').removeClass('alert-danger');
+			        		$("#btn_atencioncDatosA").attr('disabled', false).html("Enviar");
+			        		$("#telefono").val("");
+			        		$("#email").val("");
+			        		$("#genero").val("");
+			        		$("#profesion").val("");
+			        		$("#mensaje").val("");
+			        		setTimeout( function(){ $(".alert.msg-contacto").hide('slow');} , 3000);
+			        	break;
+			        	default:
+                            $(".alert.msg-contacto").html("<strong>Éxito!</strong>&nbsp; Su mensaje se ha enviado correctamente.").addClass('alert-success').removeClass('alert-danger');
+                            $("#btn_atencionc").attr('disabled', false).html("Enviar");
+                            $("#genero").val("");
+                            $("#telefono").val("");
+                            $("#profesion").val("");
+                            $("#email").val("");
+                            $("#mensaje").val("");
+                            console.log(e);
+                            break;
+			        }
+                }
+		      });
+			}
+	});//Boton
+
+});
+

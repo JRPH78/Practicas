@@ -1,0 +1,132 @@
+// JavaScript Document
+$(document).ready(function(){
+    // try{
+	// 	qm_create(0,false,0,500,'lev2',false,false,false,true);       
+	// }catch(exception){
+	// 	console.log(exception);
+	// }
+    Tooltips();        
+});
+function Inicio(){   
+    window.location='index.php';
+}
+function Buscar_Cita(){
+    window.location='buscar_cita.php';
+}
+function Entrar(){    
+    window.location='paso1.php';
+}
+function Oficina(id){
+    var parametros='id='+id;
+    window.location='paso2.php?'+parametros;    
+}
+function Tipo_Persona(tipo){    
+    window.location='paso3.php?tipo_p='+tipo;    
+}
+function Tipo_Emplacamiento(id,compulsa){
+    var parametros='tipo_emp='+id;
+    parametros+='&compulsa='+compulsa;    
+    window.location='paso4.php?'+parametros;
+}
+function Tramite(id){
+    var parametros='id='+id;
+    window.location='paso5.php?'+parametros;        
+}
+function Fecha(dia,mes,anio){    
+    var fecha=dia+'/'+mes+'/'+anio;
+    var parametros='fecha='+fecha;
+    window.location='paso6.php?'+parametros;            
+}
+function Horario(id,id2){        
+    var parametros='id1='+id;
+    parametros+='&id2='+id2;
+    window.location='paso7.php?'+parametros;
+}
+function Checa_Curp(){
+    var logitud=$('#curp').val().length;
+}
+//----------------------------------------------------------------------
+function Mostrar_Oficina(id){    
+    var parametros='opcion=consulta_oficina';
+    parametros+='&id='+id;
+    var regreso=$.ajax({type: "POST",url:"ajax.php",data: parametros,cache: false,async: false,dataType:'text'}).responseText;    
+    var datos=jQuery.parseJSON(regreso);    
+    $('body').append('<div id="Emergente"></div>');
+    $('#Emergente').load('vista/map.php',function(i){
+        $('#Emergente').dialog({
+            autoOpen: true,
+            width:830,
+            modal: true,
+            title: datos.Descrip,
+            resizable: false,
+            closeOnEscape:false,
+            draggable: false,
+            position: 'top',
+            buttons: {		
+                'Cerrar':function() {
+                    $(this).html('');
+                    $(this).dialog('destroy');
+                    $('#Emergente').remove();
+            }
+        }});
+        $.getScript("controlador/google_map.js",function(i){Initialize(datos);});
+    });    
+}
+function Cerrar(){
+    window.close();
+}
+function Regresar(){
+    history.back();
+}
+function Contacto(){    
+    $('body').append('<div id="MapEmergente"></div>');
+    $('#MapEmergente').load('contacto.php',function(){                        
+        var latlng = new google.maps.LatLng(19.233469746180877, -103.70652258396149);    
+        var myOptions = {
+            zoom: 18,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        marker = new google.maps.Marker({position:latlng,map: map,title:''});        
+        //google.maps.event.addListener(map, 'click', function(event) {AddMarker(event.latLng,'');});
+        $("#MapEmergente").dialog({
+            autoOpen: true,
+            width: 650,
+            modal: true,
+            title:'Cont&aacute;ctanos',
+            resizable: false,
+            closeOnEscape:false,
+            draggable: false,
+            position: 'center',            
+            buttons: {		                        
+                'Cerrar':function(){                       
+                $(this).html('');
+                $(this).dialog('destroy');
+                $('#MapEmergente').remove();
+                }}
+        }); 
+        $(document).Cierra_Loading();
+    });
+}
+function DescargaManual(){    
+    window.open('manual/transporte.pdf','_blank','');    
+}
+function AddMarker(location,titulo) {
+  if (markersArray) {
+    for (i in markersArray) {
+      markersArray[i].setMap(null);
+    }
+  }
+  marker = new google.maps.Marker({
+    position: location,
+    map: map,
+    title:titulo
+  });
+  $('#latLng').val(location);  
+  var coordenadas=document.getElementById('latLng').value.split(',');
+  var longi=coordenadas[1].length;
+  $('#Posx').val(coordenadas[0].substr(1));  
+  $('#Posy').val(coordenadas[1].substr(0,longi-1));
+  markersArray.push(marker);
+}

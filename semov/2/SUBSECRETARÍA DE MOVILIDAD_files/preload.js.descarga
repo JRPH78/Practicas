@@ -1,0 +1,18 @@
+// JavaScript Document
+function Loading(Modal){
+    $('body').append('<div id="loading_div" class="Preloader"></div>');
+    $('#loading_div').modal({
+            zIndex:9900,
+            opacity:60,
+            escClose:false,
+            modal: Modal,
+            onClose: function(){                
+                $.modal.close();
+                $("#loading_div").empty();
+                $("#loading_div").remove();
+            }
+    });
+}
+function Cierra_Loading(){
+    $.modal.close();    
+}

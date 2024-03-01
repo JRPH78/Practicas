@@ -1,0 +1,68 @@
+$(document).ready(function() {
+
+
+    var ruta;
+    var dominio = document.domain;
+        // var comparacion = arrayDominios.indexOf(dominio);            			
+    var obj;
+    //     $('a').each(function( index ) {
+    //         obj = this
+    //         try {
+    //             ruta = $(obj).attr('href');					
+    //             //console.log(dominio);
+    //             if((ruta.indexOf(dominio) > -1) == false 
+    //             && (ruta.indexOf('javascript:') > -1) == false 
+    //             && (ruta.indexOf('void') > -1) == false 
+    //             && $.trim(ruta).substr(0,1) != '#' )
+    //             {
+    //                 modificarAtributos(obj);
+    //             }
+           
+
+    //         } catch (e) {
+
+    //         }
+
+    //     });
+    // });
+
+    function modificarAtributos(obj) {
+        ruta = $(obj).attr('href');
+        $(obj).attr("onclick","javascript:redireccionPortal('"+ruta+"');");
+        $(obj).removeAttr('href');
+        $(obj).addClass('cursor');
+        // return false;
+
+    }
+
+    function atributos(obj) {
+        ruta = $(obj).attr('href');
+        $(obj).attr("href",ruta);
+    }
+
+    function redireccionPortal(href){
+        console.log(href);
+        // if($.trim(href).length > 0 && $.trim(href) != '#'){
+        //      swal("Estás saliendo del sitio www.col.gob.mx", {
+        //             title:'www.col.gob.mx dice ',
+        //             buttons: {
+        //                 cancel:"Cancelar",
+        //                 continuar:{
+        //                     text:"Continuar",
+        //                     value:"Continuar",
+        //                     className:"custom-buttom-noticias"
+        //                 }
+        //             },
+        //         })
+        //         .then((value) => {
+        //               switch (value) {
+        //                 case "Continuar":
+        //                 window.open(href,'_blank');
+        //                 default:
+        //                 false
+        //               }
+        //         });
+        // }
+    }
+    
+});

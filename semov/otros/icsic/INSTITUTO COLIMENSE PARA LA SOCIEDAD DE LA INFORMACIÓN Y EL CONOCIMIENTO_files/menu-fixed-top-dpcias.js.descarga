@@ -1,0 +1,17 @@
+/*Jquery personalizados*/
+jQuery(document).ready(function($) {
+	/*Fixed menu top scroll*/
+    $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll > 90) {
+       	
+       	  $(".container-fluid.navbar-secondary-container").addClass("fixed-top");
+       	  
+       }else{
+       	  
+       		$(".container-fluid.navbar-secondary-container").removeClass('fixed-top').removeClass('menu-background-transparent-pu');
+       }
+    });
+    /*Fixed menu top scroll*/
+  
+});

@@ -1,0 +1,23 @@
+/************************ Imagenes ******************************/
+.Error{
+	background:url(imgs/err.png) no-repeat ;
+}
+.Informacion{
+	background:url(imgs/information.png) no-repeat;
+}
+.Alerta{
+	background:url(imgs/warning.png) no-repeat;
+}
+.Confirmacion{
+	background:url(imgs/confirmation.png) no-repeat;
+}
+.Mensajes{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+}

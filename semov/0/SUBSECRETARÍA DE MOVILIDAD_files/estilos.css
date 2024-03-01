@@ -1,0 +1,250 @@
+/*********************** Maquetado ******************************/
+.Nombre_Sistema {
+  color: #666666;
+  font-size: 22px;
+  font-weight: bold;
+  width: 638px;
+  position: relative;
+  text-align: center;
+  top: -122px;
+  left: 336px;
+}
+.Usuario {
+  color: #666666;
+  font-size: 10px;
+  font-weight: bold;
+  width: 638px;
+  position: relative;
+  text-align: right;
+  top: -103px;
+  left: 336px;
+}
+.Menus {
+  position: relative;
+  top: -34px;
+}
+.Contenido {
+  position: relative;
+  top: -22px;
+}
+/******************** PASOS *******************************/
+.Pasos {
+  background: url(../imagenes/pasos.png);
+  background-repeat: no-repeat;
+  width: 122px;
+  height: 28px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+#nota_importante {
+  position: relative;
+  left: 580px;
+}
+.Oficinas {
+  border: solid 1px #000;
+}
+/******************** HORARIOS *************************/
+.Seleccionado {
+  background-color: #fff;
+}
+.Libre {
+  background-color: #093;
+}
+.Ocupado {
+  background-color: #ba1212;
+}
+/********************************************************/
+/*-----------------------------------------------------------*/
+.Usuarios {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  color: #fff;
+}
+.Titulo_Sistema {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+  font-variant: normal;
+  text-transform: none;
+  color: #fff;
+}
+.Notas {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: lighter;
+  font-variant: normal;
+  text-transform: none;
+  color: #000;
+}
+.Labels {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+  font-variant: normal;
+  text-transform: none;
+  color: #000;
+}
+.Fields {
+  border: 1px solid #004f00; /*{bgColorError}*/
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: lighter;
+  font-variant: normal;
+  text-transform: none;
+  color: #000;
+}
+.Mensajes {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bolder;
+  font-variant: normal;
+  /*text-transform: capitalize;*/
+  color: #333;
+  text-decoration: none;
+}
+.Field_Busquedas {
+  border: 1px solid #004f00; /*{bgColorError}*/
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+  font-variant: normal;
+  text-transform: none;
+  color: #333;
+}
+.componente_marcado {
+  border: 2px solid #858585; /*{bgColorError}*/
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  color: #000;
+  background-color: #fcfcda;
+}
+.div_contenedor {
+  border: medium solid #666;
+  overflow: auto;
+}
+.Headers {
+  background-color: #565759;
+  color: #fff;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+  font-variant: normal;
+  text-decoration: none;
+}
+.Headers_SinFormato {
+  background-color: #565759;
+  color: #fff;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+  font-variant: normal;
+  text-decoration: none;
+}
+.Fila1 {
+  background-color: #fff;
+  font-weight: lighter;
+  font-style: normal;
+  line-height: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  color: #000;
+}
+.Fila2 {
+  background-color: #f2f2f2;
+  font-weight: lighter;
+  font-style: normal;
+  line-height: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  color: #000;
+}
+.Fila_Sombreada {
+  background-color: #9ac15f;
+  font-weight: lighter;
+  font-style: normal;
+  line-height: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  color: #000;
+}
+.Textos_Justificados {
+  text-align: justify;
+}
+.Tabla {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+}
+/************************ NIVELES *****************************/
+.nivel1 {
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif, cursive;
+  font-style: normal;
+  font-weight: bold;
+  color: #fff !important;
+}
+.nivel2 {
+  text-align: left;
+  font-family: Verdana, Geneva, sans-serif, cursive;
+  font-style: normal;
+  font-weight: bold;
+}
+.nivel3 {
+  width: 100px;
+  text-align: left;
+  font-family: Verdana, Geneva, sans-serif, cursive;
+  font-style: normal;
+  font-weight: bold;
+}
+.session {
+  overflow: visible;
+  position: absolute;
+  visibility: visible;
+  z-index: 9999;
+  width: 600px;
+  height: 600px;
+  left: 810px;
+  top: -2px;
+}
+.Contacto {
+  background-image: url(../imagenes/interfaz/Fondo.png);
+  background-repeat: no-repeat;
+}
+.BtnContacto {
+  background-image: url(../imagenes/interfaz/Contactanos.png);
+  background-repeat: no-repeat;
+}
+.BtnManual {
+  background-image: url(../imagenes/interfaz/DescargarManual.png);
+  background-repeat: no-repeat;
+}

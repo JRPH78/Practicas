@@ -1,0 +1,70 @@
+// JavaScript Document
+function Print_R(theObj){
+    var regreso='';
+    if(theObj.constructor == Array || theObj.constructor == Object){
+       for(var p in theObj){
+          if(theObj [p] .constructor == Array || theObj [p] .constructor == Object){
+             regreso=regreso+'['+p+'] => '+typeof(theObj)+"\n"
+             print_r(theObj [p] );
+          } else {
+             regreso=regreso+'['+p+'] => '+theObj [p] +"\n"
+          }
+       }
+    }        
+    alert(regreso);
+}
+function Marcar_Componente(componente){$(componente).addClass('componente_marcado');}
+function Desmarca_Componente(componente){$(componente).removeClass('componente_marcado');} 
+function Cambia_Color(celda,clase){celda.className=clase;}
+function UpdateTips(texto,tip) {		
+    tip.text(texto)
+    tip.addClass('ui-state-error');
+}
+function Valida_Campo(o,tips){
+    if(o.val()==""){
+        o.addClass('ui-state-error ');
+        UpdateTips("Campo requerido.",tips);
+        return false;
+    }else{				
+        return true;
+    }
+}
+function Valida_Longitud(o,longitud,tip,mensaje){
+    var longi=o.val().length;    
+    if(longi<longitud){    
+        o.addClass('ui-state-error ');
+        UpdateTips(mensaje,tip);
+        return false;
+    }else{
+        return true
+    }    
+}
+function Valida_Correo(o,div){
+    var vector=o.val().split('@');        
+    var posiciones=vector.length;        
+    if(posiciones==2){            
+        var vector=o.val().split('.');
+        var posiciones=vector.length;
+        if(posiciones>1){
+            return true;
+        }else{
+            o.addClass('ui-state-error');
+            UpdateTips("Correo Invalido.",div);
+            return false;
+        }
+    }else{
+        o.addClass('ui-state-error');
+        UpdateTips("Correo Invalido.",div);
+        return false;
+    }
+}
+function Compara_Campos(campo1,campo2,tip){
+    if(campo1.val()!=campo2.val()){
+        campo1.addClass('ui-state-error ');
+        campo2.addClass('ui-state-error ');
+        UpdateTips("Los campos no son iguales.",tip);
+        return false;
+    }else{
+        return true;
+    }
+}
