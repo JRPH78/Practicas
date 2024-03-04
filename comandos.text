@@ -1,0 +1,7 @@
+git add .
+git commit -m "Texto que identifique por que se hizo el commit"
+git push origin main
+
+Muestra los logs de los commits
+
+	git log
