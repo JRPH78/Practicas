@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)https://semov.col.gob.mx/citas/paso5.php?id=956 -->
 <html>
   <!-- InstanceBegin template="/Templates/Plantilla.dwt" codeOutsideHTMLIsLocked="false" --><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -137,7 +136,7 @@
     <!--<link type="text/css" href="lib/menu/white/menu.css" rel="stylesheet"/>-->
     <script
       type="text/javascript"
-      src="./SUBSECRETARÍA DE MOVILIDAD_files/menu.js.descarga"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/menu.js"
     ></script>
     <!-- PLUGIN DATATABLE -->
     <link
@@ -378,877 +377,716 @@
         </div>
       </div>
       <div class="container">
+        <h2>Seleccione la Fecha de la Cita:</h2>
+        <div class="card border-dark mb-3">
+          <h5 class="card-header text-center">Calendario de Disponibilidad</h5>
+
+          <div class="card-body">
+            <div class="row">
+              <div class="col-2 text-center">
+                <i class="fa fa-calendar-check-o fa-5x" aria-hidden="true"></i>
+              </div>
+
+              <div class="col text-center">
+                <div class="row">
+                  <div class="col">
+                    <div
+                      style="
+                        width: 20px;
+                        height: 10px;
+                        background-color: #529cac;
+                        display: inline-block;
+                        vertical-align: middle;
+                      "
+                    ></div>
+                    DIA ACTUAL
+                  </div>
+                  <div class="col">
+                    <div
+                      style="
+                        width: 20px;
+                        height: 10px;
+                        background-color: #0b610b;
+                        display: inline-block;
+                        vertical-align: middle;
+                      "
+                    ></div>
+                    DIA CON DISPONIBILIDAD
+                  </div>
+                  <div class="col">
+                    <div
+                      style="
+                        width: 20px;
+                        height: 10px;
+                        background-color: #ba1212;
+                        display: inline-block;
+                        vertical-align: middle;
+                      "
+                    ></div>
+                    DIA SIN DISPONIBILIDAD
+                  </div>
+                </div>
+
+                <div class="row" style="margin-top: 1rem">
+                  <div class="col">
+                    <div
+                      style="
+                        width: 20px;
+                        height: 10px;
+                        background-color: #727272;
+                        display: inline-block;
+                        vertical-align: middle;
+                      "
+                    ></div>
+                    DIA INHABIL
+                  </div>
+                  <div class="col">
+                    <div
+                      style="
+                        width: 20px;
+                        height: 10px;
+                        background-color: #e38600;
+                        display: inline-block;
+                        vertical-align: middle;
+                      "
+                    ></div>
+                    DIA NO APERTURADO
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div style="margin-bottom: 0.5rem">
+              <select
+                name="CmbFecha"
+                id="CmbFecha"
+                class="Fields ui-corner-all custom-select"
+                onchange="Cambia_Fecha();"
+                style="width: 250px"
+              >
+                <option value="2|2024" selected="">Febrero - 2024</option>
+                <option value="3|2024">Marzo - 2024</option>
+              </select>
+            </div>
+
+            <div class="calendar-content">
+              <div id="calendar-table" class="calendar-cells">
+                <div id="table-header">
+                  <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+                <div id="table-body" class="">
+                  <td width="823" onmouseout="">
+                    <div id="calendario_div">
+                      <table
+                        border="0"
+                        cellpadding="2"
+                        cellspacing="2"
+                        width="100%"
+                        class="opciones"
+                        bgcolor="#cfcfcf"
+                        height="100%"
+                      >
+                        <tbody id="mi-tbody">
+                          <tr>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              bgcolor="#4b4b4b"
+                            >
+                              <font color="#FFFFFF"
+                                ><strong>Lunes</strong></font
+                              >
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              bgcolor="#4b4b4b"
+                            >
+                              <font color="#FFFFFF"
+                                ><strong>Martes</strong></font
+                              >
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              bgcolor="#4b4b4b"
+                            >
+                              <font color="#FFFFFF"
+                                ><strong>Miércoles</strong></font
+                              >
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              bgcolor="#4b4b4b"
+                            >
+                              <font color="#FFFFFF"
+                                ><strong>Jueves</strong></font
+                              >
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              bgcolor="#4b4b4b"
+                            >
+                              <font color="#FFFFFF"
+                                ><strong>Viernes</strong></font
+                              >
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              bgcolor="#4b4b4b"
+                            >
+                              <font color="#FFFFFF"
+                                ><strong>Sábado</strong></font
+                              >
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              bgcolor="#4b4b4b"
+                            >
+                              <font color="#FFFFFF"
+                                ><strong>Domingo</strong></font
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #4b4b4b;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Pasado"
+                            >
+                              <strong><font>1</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>2</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>3</font></strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #529cac;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Actual"
+                            >
+                              <strong><font>4</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>5</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>6</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>7</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>8</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>9</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>10</font></strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>11</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>12</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>13</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>14</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>15</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>16</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>17</font></strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="background: #808080; cursor: not-allowed"
+                              title="Inhábil por: NATALICIO DE BENITO JUÁREZ"
+                            >
+                              <strong><font>18</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>19</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #ba1212;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Lleno"
+                            >
+                              <strong><font>20</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #0b610b;
+                                cursor: pointer;
+                                color: #000000;
+                              "
+                              title="Día con disponibilidad"
+                              onclick="Fecha(21,3,2024);"
+                            >
+                              <strong><font>21</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #e38600;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día NO Aperturado"
+                            >
+                              <strong><font>22</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>23</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>24</font></strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #e38600;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día NO Aperturado"
+                            >
+                              <strong><font>25</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #e38600;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día NO Aperturado"
+                            >
+                              <strong><font>26</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #e38600;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día NO Aperturado"
+                            >
+                              <strong><font>27</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #e38600;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día NO Aperturado"
+                            >
+                              <strong><font>28</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #e38600;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día NO Aperturado"
+                            >
+                              <strong><font>29</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>30</font></strong>
+                            </td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              style="
+                                background: #727272;
+                                cursor: not-allowed;
+                                color: #000000;
+                              "
+                              title="Día Inhábil"
+                            >
+                              <strong><font>31</font></strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                            <td
+                              width="14%"
+                              height="19"
+                              align="center"
+                              <=""
+                              strong=""
+                            ></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
         <div id="contenido" class="Contenido">
           <!-- InstanceBeginEditable name="EditRegion2" -->
-          <table width="100%" border="0" cellspacing="0" cellpadding="3">
-            <tbody>
-              <tr>
-                <td width="72%" align="left" valign="middle" class="Mensajes">
-                  <h2>Seleccione el Tipo de Trámite Vehicular:</h2>
-                </td>
-              </tr>
-              <tr>
-                <td height="65" colspan="2" align="left" valign="top">
-                  <table
-                    width="100%"
-                    border="0"
-                    cellspacing="0"
-                    cellpadding="3"
-                  >
-                    <tbody>
-                      <tr>
-                        <td width="3%">&nbsp;</td>
-                        <td width="97%" align="left">
-                          <div id="div_calendario">
-                            <div align="center">
-                              <table
-                                width="892"
-                                border="0"
-                                align="center"
-                                cellpadding="0"
-                                cellspacing="0"
-                                background="./SUBSECRETARÍA DE MOVILIDAD_files/calendario_V3.png"
-                                class="img-fluid"
-                                style="background-repeat: no-repeat"
-                              >
-                                <tbody>
-                                  <tr>
-                                    <th width="140" height="47" scope="row">
-                                      &nbsp;
-                                    </th>
-                                    <td width="706">&nbsp;</td>
-                                    <td width="46">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <th height="63" scope="row">&nbsp;</th>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <th height="49" scope="row">&nbsp;</th>
-                                    <td>
-                                      <table
-                                        width="76%"
-                                        border="0"
-                                        cellspacing="0"
-                                        cellpadding="0"
-                                        align="center"
-                                      >
-                                        <tbody>
-                                          <tr>
-                                            <input
-                                              type="hidden"
-                                              name="dia"
-                                              id="dia"
-                                              value="21"
-                                            />
-                                            <input
-                                              type="hidden"
-                                              name="mes"
-                                              id="mes"
-                                              value="2"
-                                            />
-                                            <input
-                                              type="hidden"
-                                              name="anio"
-                                              id="anio"
-                                              value="2024"
-                                            />
-
-                                            <td align="center">
-                                              <select
-                                                name="CmbFecha"
-                                                id="CmbFecha"
-                                                class="Fields ui-corner-all"
-                                                onchange="Cambia_Fecha();"
-                                                style="width: 250px"
-                                              >
-                                                <option
-                                                  value="2|2024"
-                                                  selected=""
-                                                >
-                                                  Febrero - 2024
-                                                </option>
-                                                <option value="3|2024">
-                                                  Marzo - 2024
-                                                </option>
-                                              </select>
-                                            </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                    <td>&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                    <th
-                                      height="254"
-                                      colspan="3"
-                                      align="left"
-                                      valign="top"
-                                      scope="row"
-                                    >
-                                      <table
-                                        width="100%"
-                                        border="0"
-                                        cellspacing="0"
-                                        cellpadding="0"
-                                      >
-                                        <tbody>
-                                          <tr>
-                                            <th width="24" scope="row">
-                                              &nbsp;
-                                            </th>
-                                            <td width="823" onmouseout="">
-                                              <div id="calendario_div">
-                                                <table
-                                                  border="0"
-                                                  cellpadding="2"
-                                                  cellspacing="2"
-                                                  width="100%"
-                                                  class="opciones"
-                                                  bgcolor="#cfcfcf"
-                                                  height="100%"
-                                                >
-                                                  <tbody id="mi-tbody">
-                                                    <tr>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        bgcolor="#4b4b4b"
-                                                      >
-                                                        <font color="#FFFFFF"
-                                                          ><strong
-                                                            >Lunes</strong
-                                                          ></font
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        bgcolor="#4b4b4b"
-                                                      >
-                                                        <font color="#FFFFFF"
-                                                          ><strong
-                                                            >Martes</strong
-                                                          ></font
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        bgcolor="#4b4b4b"
-                                                      >
-                                                        <font color="#FFFFFF"
-                                                          ><strong
-                                                            >Miércoles</strong
-                                                          ></font
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        bgcolor="#4b4b4b"
-                                                      >
-                                                        <font color="#FFFFFF"
-                                                          ><strong
-                                                            >Jueves</strong
-                                                          ></font
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        bgcolor="#4b4b4b"
-                                                      >
-                                                        <font color="#FFFFFF"
-                                                          ><strong
-                                                            >Viernes</strong
-                                                          ></font
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        bgcolor="#4b4b4b"
-                                                      >
-                                                        <font color="#FFFFFF"
-                                                          ><strong
-                                                            >Sábado</strong
-                                                          ></font
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        bgcolor="#4b4b4b"
-                                                      >
-                                                        <font color="#FFFFFF"
-                                                          ><strong
-                                                            >Domingo</strong
-                                                          ></font
-                                                        >
-                                                      </td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >1</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >2</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #727272;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Inhábil"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >3</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #727272;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Inhábil"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >4</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >5</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >6</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >7</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >8</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >9</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #727272;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Inhábil"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >10</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #727272;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Inhábil"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >11</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >12</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >13</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >14</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >15</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >16</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #727272;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Inhábil"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >17</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #727272;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Inhábil"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >18</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >19</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #4b4b4b;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Pasado"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >20</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #529cac;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Actual"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >21</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #ba1212;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Lleno"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >22</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #ba1212;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Lleno"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >23</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #727272;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Inhábil"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >24</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #727272;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Inhábil"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >25</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #ba1212;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Lleno"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >26</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #ba1212;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Lleno"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >27</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #ba1212;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Lleno"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >28</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        style="
-                                                          background: #ba1212;
-                                                          cursor: not-allowed;
-                                                          color: #000000;
-                                                        "
-                                                        title="Día Lleno"
-                                                      >
-                                                        <strong
-                                                          ><font
-                                                            >29</font
-                                                          ></strong
-                                                        >
-                                                      </td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                      <td
-                                                        width="14%"
-                                                        height="19"
-                                                        align="center"
-                                                        <=""
-                                                        strong=""
-                                                      ></td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </div>
-                                            </td>
-                                            <td width="45">&nbsp;</td>
-                                          </tr>
-                                          <tr>
-                                            <th
-                                              colspan="3"
-                                              height="19"
-                                              scope="row"
-                                            >
-                                              &nbsp;
-                                            </th>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </th>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                            <div
-                              id="pregunta"
-                              style="display: none"
-                              title="Día Cerrado"
-                            >
-                              <p>
-                                Este día ya se encuentra cerrado. Desea realizar
-                                la Solicitud?
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
 
         <!-- InstanceEndEditable -->
       </div>
       <div class="container" style="padding-top: 2rem">
-        <div class="card-deck">
-          <div class="card border-light mb-3">
-            <div class="card-header"><h3>Información Acumulada</h3></div>
-            <div class="card-body">
-              <p class="card-text">
-                <strong>Oficina: </strong> <br />
-                <strong>Tipo de Persona: </strong><br />
-                <strong>Tipo de Unidad Vehicular: </strong> <br />
-              </p>
-            </div>
+        <div class="card mb-3">
+          <div class="card-header">
+            <h3>
+              <i class="fa fa-info-circle" aria-hidden="true"></i> Información
+              Acumulada
+            </h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              <strong>Oficina: </strong> <br />
+              <strong>Tipo de Persona: </strong><br />
+              <strong>Tipo de Unidad Vehicular: </strong> <br />
+            </p>
           </div>
         </div>
       </div>
@@ -1399,12 +1237,12 @@
     ></script>
     <script
       type="text/javascript"
-      src="./SUBSECRETARÍA DE MOVILIDAD_files/funciones.js.descarga"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/funciones.js"
     ></script>
     <!-- InstanceBeginEditable name="Controladores" -->
     <script
       type="text/javascript"
-      src="./SUBSECRETARÍA DE MOVILIDAD_files/calendario.js.descarga"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/calendario.js"
     ></script>
     <!-- la siguiente línea de código tiene como funcionalidad, solicitar en el módulo ciudadano, una contraseña de administrador si quiere registrar una cita para el mismo día.
      Se comentó debido a que el día 31 de Julio de 2012, se liberó la opción Registrar Citas desde el Módulo de Administrador, para evitar inconformidades con los ciudadanos. -->
