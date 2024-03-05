@@ -147,8 +147,8 @@
 	background-color: #FCFCDA;
 }
 .div_contenedor{
-	max-width:!important; 
-	max-height:!important	
+	max-width: !important; 
+	max-height: !important	
 	border: medium solid #666;
 	overflow:auto;		
 }
@@ -206,7 +206,7 @@
 .Tabla{
 	border-style: solid;
 	border-width: 1px;
-	border-color:#CCC;	
+	border-color:#FFF;	
 }
 /************************ NIVELES *****************************/
 .nivel1{		
