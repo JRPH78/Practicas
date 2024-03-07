@@ -288,92 +288,162 @@
         <div class="container" style="margin-top: 1rem">
           <div class="row">
             <div class="col">
-              <p>
-                <span class="span">IMPORTANTE:: </span><br />La cancelación de
-                su Cita, requiere de 24 horas de Anticipación.
-              </p>
+              <div class="alert alert-warning text-center">
+                <strong>IMPORTANTE:</strong> La cancelación de su Cita, requiere
+                de 24 horas de Anticipación.
+              </div>
             </div>
-
-            <div class="col text-right"></div>
           </div>
         </div>
         <div class="container">
-          <div class="card" style="max-width: 35rem">
-            <h5 class="card-header">Buscar Cita:</h5>
-            <div class="card-body">
-              <div class="container text-left">
-                <div>
-                  <table
-                    width="100%"
-                    border="0"
-                    cellspacing="0"
-                    cellpadding="5"
-                    align="center"
-                  >
-                    <tbody>
-                      <tr>
-                        <td width="50%" height="45" class="Labels">
-                          Buscar Por:
-                        </td>
-                        <td width="50%">
-                          <select
-                            id="Tbusqueda"
-                            style="width: 200px"
-                            class="ui-corner-all custom-select"
-                            onchange="Cambia_TBusqueda();"
+          <div class="row">
+            <div class="offset-3 col-6">
+              <div class="card">
+                <h5 class="card-header">Buscar Cita:</h5>
+                <div class="card-body">
+                  <div class="container text-left">
+                    <div>
+                      <form>
+                        <div class="form-group row">
+                          <label
+                            for="staticEmail"
+                            class="col-sm-2 col-form-label"
                           >
-                            <option value="serie">Padrón Vehicular</option>
-                            <option value="folio">Folio</option>
-                          </select>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td width="50%" height="45" class="Labels">
-                          <label id="lbl_Tbusqueda">Folio:</label>
-                        </td>
-                        <td width="50%">
-                          <input
-                            type="text"
-                            id="text_Tbusqueda"
-                            class="form-control"
-                            style="width: 200px"
-                            maxlength="18"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td width="50%" height="45" class="Labels">
-                          <label id="lbl_Tbusqueda">CURP:</label>
-                        </td>
-                        <td width="50%">
-                          <input
-                            type="text"
-                            id="CURP"
-                            class="form-control"
-                            style="width: 200px"
-                            maxlength="18"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td height="21" colspan="3" class="Labels">
-                          <div id="validate_tip" class="ui-corner-all"></div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                            Buscar Por:</label
+                          >
+                          <div class="col-sm-10">
+                            <select
+                              id="Tbusqueda"
+                              class="ui-corner-all form-control"
+                              onchange="Cambia_TBusqueda();"
+                            >
+                              <option value="serie">Padrón Vehicular</option>
+                              <option value="folio">Folio</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label
+                            for="inputPassword"
+                            class="col-sm-2 col-form-label"
+                            >Password</label
+                          >
+                          <div class="col-sm-10">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id=""
+                              placeholder="Password"
+                            />
+                          </div>
+                        </div>
+                      </form>
 
-                  <div class="text-left" style="padding: 10px">
-                    <div
-                      class="card-footer justify-content-between text-center"
-                    >
-                      <a
-                        href="#"
-                        class="btn btn-primary"
-                        onclick="Busca_Cita();"
-                        style="background-color: #8c1e41"
-                        >Buscar</a
+                      <div class="text-left" style="padding: 10px">
+                        <div
+                          class="card-footer justify-content-between text-right"
+                        >
+                          <a
+                            href="#"
+                            class="btn btn-primary"
+                            onclick="Busca_Cita();"
+                            style="background-color: #8c1e41"
+                            >Buscar</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="offset-3 col-5">
+              <div class="card">
+                <h5 class="card-header">Buscar Cita:</h5>
+                <div class="card-body">
+                  <div class="container text-left">
+                    <div>
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="5"
+                        align="center"
                       >
+                        <tbody>
+                          <tr>
+                            <td width="50%" height="45" class="Labels">
+                              Buscar Por:
+                            </td>
+                            <td width="50%">
+                              <select
+                                id="Tbusqueda"
+                                style="width: 200px"
+                                class="ui-corner-all custom-select"
+                                onchange="Cambia_TBusqueda();"
+                              >
+                                <option value="serie">Padrón Vehicular</option>
+                                <option value="folio">Folio</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="50%" height="45" class="Labels">
+                              <label id="lbl_Tbusqueda">Folio:</label>
+                            </td>
+                            <td width="50%">
+                              <input
+                                type="text"
+                                id="text_Tbusqueda"
+                                class="form-control"
+                                style="width: 200px"
+                                maxlength="18"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="50%" height="45" class="Labels">
+                              <label id="lbl_Tbusqueda">CURP:</label>
+                            </td>
+                            <td width="50%">
+                              <input
+                                type="text"
+                                id="CURP"
+                                class="form-control"
+                                style="width: 200px"
+                                maxlength="18"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="21" colspan="3" class="Labels">
+                              <div
+                                id="validate_tip"
+                                class="ui-corner-all"
+                              ></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="text-left" style="padding: 10px">
+                        <div
+                          class="card-footer justify-content-between text-right"
+                        >
+                          <a
+                            href="#"
+                            class="btn btn-primary"
+                            onclick="Busca_Cita();"
+                            style="background-color: #8c1e41"
+                            >Buscar</a
+                          >
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
