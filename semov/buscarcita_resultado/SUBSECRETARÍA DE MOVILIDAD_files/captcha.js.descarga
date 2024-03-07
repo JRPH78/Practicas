@@ -1,0 +1,30 @@
+// JavaScript Document
+jQuery.Captcha= function(ruta,div){    
+    var parametros='ruta='+ruta;
+    parametros+='&div='+div;
+    var html=$.ajax({type: "POST",url: ruta+"captcha.php",data: parametros,cache: false,async: false}).responseText;
+    $('#'+div).html(html);    
+    $('#CaptchaLib').val(ruta);
+    $('#CaptchaDiv').val(div);        
+    var marco=document.getElementById('CaptchaFrame');
+    marco.src=ruta+'/lib/captcha.php';    
+    $('#text_captcha').removeClass('ui-state-error');
+    $('#text_captcha').val('');
+    $('#text_captcha').focus();        
+}
+jQuery.Captcha.Validate=function (){
+    var parametros='&codigo='+$('#text_captcha').val();	
+    var captcha=$.ajax({type: "POST",url:$('#CaptchaLib').val()+"ajax.php",data: parametros,cache: false,async: false}).responseText;
+    if(captcha=='1'){
+        $('#text_captcha').removeClass('ui-state-error');
+        $('#captcha_tip').removeClass('ui-state-error');        
+        $('#captcha_tip').html(''); 
+        var regreso=true;
+    }else{
+        $('#text_captcha').addClass('ui-state-error');
+        $('#captcha_tip').addClass('ui-state-error');
+        $('#captcha_tip').html('Codigo de Verificación Incorrecto');        
+        var regreso=false;
+    }    
+    return regreso;
+}

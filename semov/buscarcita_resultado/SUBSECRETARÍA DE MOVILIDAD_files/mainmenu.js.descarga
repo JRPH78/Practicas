@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html ng-app="PortalUnico" prueba="true">
+  <head >
+    <meta name="google-site-verification" content="vgE7xTPnRDI9JNHuGHmNQeU55Yr58j9hwq9Wk06R8qk" />  
+    <title>
+      Gobierno del Estado de Colima    </title>	
+    <link rel="SHORTCUT ICON" href="https://openapis.col.gob.mx/API_PU/img/favicon.ico" rel="icon" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">		
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+              <!-- Bootstrap CSS -->
+               
+          <link rel="stylesheet" href="https://openapis.col.gob.mx/API_PU/css/bs4/bootstrap.min.css">        
+             
+       
+    <!-- Customcss comentario -->
+      
+    <link rel="stylesheet" href="https://openapis.col.gob.mx/API_PU/css/bs4/layout.css">
+    <script type="text/javascript" src="https://openapis.col.gob.mx/API_PU/js/b4/jquery-3.2.1.js"></script>
+       
+    
+        <!-- termina Customcss comentario -->
+
+    <Link rel = "canonical" href = "https://www.col.gob.mx/"/><meta property="og:url" 	 content="http://www.col.gob.mx" /><meta property="og:type"  content="website" /><meta property="og:title" content="Gobierno del estado de colima" /><meta property="og:description" content="Gobierno del estado de colima" /><meta property="og:image" content="http://www.col.gob.mx/assets/img/escudo.png" /><Link rel = "canonical" href = "https://www.col.gob.mx/"/><meta property="og:url" 	 content="http://www.col.gob.mx" /><meta property="og:type"  content="website" /><meta property="og:title" content="Gobierno del estado de colima" /><meta property="og:description" content="Gobierno del estado de colima" /><meta property="og:image" content="http://www.col.gob.mx/assets/img/escudo.png" /><link rel='stylesheet' type='text/css' href='https://www.col.gob.mx/assets/css/customcss.css'><div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0" nonce="ukjKNehN"></script><script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=59cd2679fdc69400125962c9&product=inline-share-buttons"></script>    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121812210-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121812210-1');
+</script>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body data-url="https://openapis.col.gob.mx/API_PU/" id="Body">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
+ <link href="https://openapis.col.gob.mx/API_PU/css/scripts/accesibilidad.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://openapis.col.gob.mx/API_PU/js/scripts/accesibilidad.js"></script>
+
+<style>
+.border_resaltar{
+	border: 2px solid red;
+}
+</style>
+
+
+<div class="row-fluid" id="navbar_visuales" data-mostrar_herramientas="" style="display:none"> 
+	<div class="container">
+		<div class="row font-changer internal print">
+				<div title="Herramientas de accesibilidad web" class="col-md-2">
+					<i class="fa fa-universal-access fa-2x"></i>&nbsp; Accesibilidad Web
+				</div>
+				<div class="col-md-10">
+					<div class="row">
+					<!-- <div class="col-md-12 text-center">Herramientas de accesibilidad web</div> -->
+						<div class="col-md-2 options_visuales cursor" title="Aumentar tamaño de la página">
+							<div class="aumentarFont"><i class="fa fa-font fa-2x">a+</i><br/>Aumentar tamaño</div>
+						</div>
+						<div class="col-md-2 options_visuales cursor" title="Disminuir tamañao de la página">
+							<div class="disminuirFont"><i class="fa fa-font fa-2x">a-</i><br/>Disminuir tamaño</div>
+						</div>
+						<div title="Aplicar alto contraste" id="pantalla_mod" data-tipo="" class="col-md-2 cursor options_visuales" onclick="ActivaModoNocturno()">
+							<i class="fa fa-adjust fa-2x"></i><br/><span>Alto contraste</span>
+						</div>
+						<div title="" class="col-md-2 options_visuales cursor" id="estado_narrador">
+							<i class="fa fa-play fa-2x"></i><br/> <span>Narrador (Desactivado)<span>
+						</div>
+						<div title="Ampliar las imagenes al pasar sobre ellas" class="col-md-2 options_visuales cursor" onclick="AmpliarImagen()">
+							<i class="fa fa-image fa-2x"></i><br/> Ampliar imagen
+						</div>
+						<a title="Reestablecer herramientas" onclick="ActivaModoRestablecer()" target="_blank" style="color:#fff !important"  class="col-md-2 options_visuales cursor">
+							<i class="fa fa-refresh fa-2x"></i><br/> Restablecer
+						</a>
+					</div>
+				</div>
+		</div>
+	</div>	
+</div>
+<!---
+<div class="container">
+    <input type="text" placeholder="Texto to Speech" id="text" value="hola">
+    <div class="conversation"></div>
+    <div class="container-button">
+      <select id="voices"></select>
+      <button id="btnSave"><i class="fas fa-upload"></i>Save text</button>
+      <button id="btnLoad" disabled><i class="fas fa-download"></i>Load text</button>
+      <button id="btnPlay" disabled><i class="fas fa-play-circle"></i>Play text</button>
+    </div>
+  </div>
+--->  <!-- nav container -->
+    <div id="GobNavbar" class="container-fluid navbar-container-pu op GobNavbar"> 
+	
+
+      <div class="container">
+	<div class="row">
+  	   <div class="col">
+          <nav class="navbar navbar-toggleable-md navbar-light ">
+		  <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		   <a class="navbar-brand text-center" href="https://www.col.gob.mx/">
+		   <!-- <i class="fa fa-home fa-2x" style="color:#fff;"></i>    nav-image-colima-estado -->
+		  	<img src="https://openapis.col.gob.mx/API_PU/img/logomin.png" class="img-fluid" title="Ir al portal" alt="colima estado"> 
+		  </a> 
+		  <div class="collapse navbar-collapse justify-content-md-center" id="navbarNavDropdown">
+		    <ul class="navbar-nav">
+			  				<li class="nav-item active">
+				  	<a class="nav-link cursor denuncia-menu" target="_blank" href="https://www.col.gob.mx/coronavirus" >CORONAVIRUS</a>
+				</li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="https://www.col.gob.mx/Portal/Tramites">Tr&aacute;mites</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Gobierno</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="https://www.col.gob.mx/Portal/#sec_atencion" >Cont&aacute;ctanos</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link cursor" target="_blank" href="https://www.col.gob.mx/DatosAbiertos" >Datos</a>
+		      </li>
+		      <!-- <li class="nav-item">
+		      	<a href="https://www.col.gob.mx/transparencia" class="nav-link cursor" target="_blank">Transparencia</a>
+		      </li> -->
+			  <li class="nav-item">
+		      	<a href="https://www.col.gob.mx/Portal/contenido/NDYzMDY=" class="nav-link cursor" target="_blank">Transparencia</a>
+		      </li>
+		      <li class="nav-item">
+				  	<a class="nav-link cursor denuncia-menu" href="https://www.col.gob.mx/index.php/Portal/denuncia" >DENUNCIA</a>
+				</li>
+		      <li class="nav-item" >
+		        <a class="nav-link" id="navbar-search-li-first" href="#" onclick="ocultar(this)"><i alt="Buscar" title="Buscar" class="fa fa-search" aria-hidden="true"></i></a>
+		      </li>
+		      	
+		      <form id="formBusqueda" method="GET" action="https://www.col.gob.mx/Portal/detalle_busqueda" class="nav-item display-none" id="navbar-search-li-second">
+		        <div class="input-group" id="navbar-input-search">
+			      <input type="text" name="q" class="form-control">
+			      <span class="input-group-btn">
+			        <button class="btn btn-secondary" type="submit">
+			        <i alt="Buscar" title="Buscar" class="fa fa-search" aria-hidden="true"></i></button>
+			      </span>
+			    </div>
+		      </form>
+		      	
+		      		    </ul>
+		  </div>
+		</nav>
+      </div>
+  </div> 
+</div>
+<a href="#" class="scrollToTop" id="ScrollTop"></a>
+<script type="text/javascript">	
+	function ocultar(elem){
+		var id = elem.id;		
+		document.getElementById(id).style.display = "none";
+		//document.getElementById("navbar-search-li-second").style.display = "inline";
+		document.getElementById("formBusqueda").style.display = "inline";
+	}
+
+</script>      
+    </div>
+ <div id="contenidoPagina">
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+            </ol>
+    <div class="carousel-inner" role="listbox">
+                    <div id="" class="carousel-item">
+                
+	<img alt="" class="img-fluid" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/file_65e0dd9587a74_GdCBannerWebVEDA_1.png" style="width: 1800px; height: 550px;" /></p>
+            </div>
+            </div>
+
+     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previo</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+</div>
+      <div class="container">
+	<div class="row">
+		<div class="col-md-7 col-12 contenedor-buscador-pu">
+			<div class="row">
+				<div class="col-10">
+										<h3 class="titulo-buscador-pu"><strong> Realizar tu búsqueda</strong></h3>
+					<form id="cse-search-box" method="get" style="margin:0" action="https://www.col.gob.mx/Portal/detalle_busqueda" name="cse-search-box">
+						<input type="hidden" name="ci_csrf_token" value="" />
+					  	<div class="input-group input-group-buscador-pu">
+                                                    <input type="text" class="form-control" placeholder="Buscar" name="q" maxlength="50" id="search-header" maxlength="50" aria-describedby="basic-addon1">
+						<button id="input-busqueda-principal-pu" class="input-group-addon busqueda-principal-icon-pu" type="submit" value="Buscar"><i class="fa fa-chevron-right fa-2x"></i></button>
+					  </div>
+					  <div id="msg_busqueda" class="" role="alert"></div>
+					</form>	
+		            <div style="display:none" id="msjbusquelinea" class="alert text-danger padding-top-bottom5" role="alert"></div>
+				</div>
+				<div class="col-2">
+					
+				</div>
+			</div>		
+		</div>
+		<div class="col-md-5 col-12" data="d-none d-md-block" style="overflow: hidden;">
+			<div class="container-servicios">
+					<h3 class="titulo-validacion-servicio">Visita nuestros servicios</h3>
+				<ul>
+				
+					<!-- <li>
+						<div class="row">
+							<div class="col-1">
+								<i class="fa fa-check-circle-o" style="font-size:22px"></i>
+							</div>
+							<div class="col-11">
+								<a href="http://validacion.col.gob.mx/" target="_blank"  class="cursor" title="validación de documentos con firma electrónica"><strong style="font-size: 20px;">Validación de documentos <br> con firma electrónica</strong></a>
+							</div>
+						</div>
+					</li> -->
+					<li>
+						<div class="row">
+							<div class="col-1">
+								<i class="fa fa-usd" style="font-size: 20px;"></i>
+							</div>
+							<div class="col-11">
+								<a href="http://www.col.gob.mx/finanzas/contenido/MTAyNjg=" class="cursor" title="Pagos en línea"><strong style="font-size: 20px;">Pagos en línea</strong></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="row">
+							<div class="col-1">
+								<i class="fa fa-shopping-cart" style="font-size:22px; color: red;"></i>
+							</div>
+							<div class="col-11" >
+								<a href="http://www.secop.col.gob.mx/" target="_blank" class="cursor" title="SECOP - licitaciones"> 
+									<strong style="font-size: 20px;">SECOP - licitaciones</strong>
+								</a>
+							</div>
+						</div>
+                    </li>
+                    <li>
+						<div class="row">
+							<div class="col-1">
+								<i class="fa fa-user" style="font-size:22px"></i>
+							</div>
+							<div class="col-11">
+								<a href="http://directoriointegral.col.gob.mx/" target="_blank"  class="cursor" title="Directorio integral"> <strong style="font-size: 20px;">Directorio integral</strong></a>
+							</div>
+						</div>
+                    </li>
+					<li>
+						<div class="row pt-5">
+							<div class="col-1">
+								&nbsp;
+								<!-- <i class="fa fa-check-circle-o" style="font-size:22px"></i> -->
+							</div>
+							<div class="col-11">
+								&nbsp;
+							</div>
+						</div>
+					</li>
+                    
+				</ul>
+			</div>	
+		</div>
+	</div>
+	
+</div>
+<br class="d-none d-md-block">
+<div class="container contenedor-temas-interes-pu">
+	<div class="row inner-temas-interes-pu">
+		<div class="col-12">
+            		</div>
+	</div>
+</div>
+
+      <div class="container" id="sec_tramites"><br><br>
+	<div class="row">
+		<h1 class="padding-left">Trámites y servicios más solicitados</h1>
+		<div class="col-12 separador-secciones-dark-2-pu"></div>
+		<span class="col-1 separador-secciones-dark-1-pu"></span>
+	</div>
+	<br><br>	
+	<div class="row sec_tramites">
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, persona física" href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/944">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, persona física				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, para placas con logotipo de discapacidad motriz permanente, persona física" href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/1021">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, para placas con logotipo de discapacidad motriz permanente, persona física				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Expedición de Acta de nacimiento, matrimonio, divorcio, defunción." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020102030200/1548">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Expedición de Acta de nacimiento, matrimonio, divorcio, defunción.				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Baja de placas del Estado de Colima registradas en el Padrón Vehicular, Persona Física." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/1135">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Baja de placas del Estado de Colima registradas en el Padrón Vehicular, Persona Física.				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Alta de automóvil, camión o camioneta nueva, persona física" href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/961">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Alta de automóvil, camión o camioneta nueva, persona física				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Cambio de propietario, baja y alta de automóvil, camión o camioneta legalizada, persona física." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/965">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Cambio de propietario, baja y alta de automóvil, camión o camioneta legalizada, persona física.				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Alta de motocicleta nueva, persona física." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/962">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Alta de motocicleta nueva, persona física.				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, persona moral." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/958">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, persona moral.				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Cambio de propietario, baja y alta de motocicleta nacional, persona física." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/964">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Cambio de propietario, baja y alta de motocicleta nacional, persona física.				</a>
+		    </div>
+								<div class="col-md-3 col-6 padding-bottom-30">
+				<a class="a-blue-link" title="Inscripción al Padrón de contratistas" href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105260000/1061">
+					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
+					Inscripción al Padrón de contratistas				</a>
+		    </div>
+				<div class="padding-bottom-30 responsive-width">
+			<a href="https://www.col.gob.mx/Portal/Tramites" title="Otros trámites" class="btn btn-block custom-buttom-noticias btn-default responsive-width">
+				Otros trámites…
+			 </a>
+
+		</div>
+	</div>
+</div>
+   <section id="destacados" class="destacados-section" >
+<div class="container"><br><br>
+	<div class="row">
+		<h1 class="padding-left">Destacados </h1>
+		<div class="col-12 separador-secciones-dark-2-pu"></div>
+		<span class="col-1 separador-secciones-dark-1-pu"></span>
+	</div>
+	<br><br>
+	<div class="row" id="destacados_1s">
+		<div class="col-12">
+						<div class="container-fluid no-padding-pu separador-top-5-pu ">
+			  <div id="destacados_slide" class="carousel slide" data-ride="carousel" data-interval="false">
+			    <ol class="carousel-indicators">
+			      			         <li data-target="#destacados_slide" data-slide-to="0"></li>
+			      			         <li data-target="#destacados_slide" data-slide-to="1"></li>
+			      			         <li data-target="#destacados_slide" data-slide-to="2"></li>
+			      			         <li data-target="#destacados_slide" data-slide-to="3"></li>
+			      			         <li data-target="#destacados_slide" data-slide-to="4"></li>
+			      			    </ol>
+			    <div class="carousel-inner" role="listbox">
+			        			       <div id="" class="carousel-item carousel-item-destacado">
+			         		<a style="width:100%;" href="https://www.col.gob.mx/Portal/contenido/NTA4MTg=" title="Comisión de Búsqueda">
+			         			<img class="img-fluid"  src="http://www.col.gob.mx/imagenv2.php?x=ODA5ODk=&amp;y=23&amp;z=1" border="0" alt="" />
+			         		</a>
+				        	<div class="carousel-caption ">
+	    						<h5>
+	    							<a href="https://www.col.gob.mx/Portal/contenido/NTA4MTg=" title="Comisión de Búsqueda">
+	    								Comisión de Búsqueda	    							</a>
+	    						</h5>
+	  						</div>
+			        </div>
+			        			       <div id="" class="carousel-item carousel-item-destacado">
+			         		<a style="width:100%;" href="https://periodicooficial.col.gob.mx/p/25122021/sup01/121122501.pdf" title="Plan Estatal de Desarrollo">
+			         			<img class="img-fluid"  src="http://www.col.gob.mx/imagenv2.php?x=ODAzOTk=&amp;y=23&amp;z=1" border="0" alt="" />
+			         		</a>
+				        	<div class="carousel-caption ">
+	    						<h5>
+	    							<a href="https://periodicooficial.col.gob.mx/p/25122021/sup01/121122501.pdf" title="Plan Estatal de Desarrollo">
+	    								Plan Estatal de Desarrollo	    							</a>
+	    						</h5>
+	  						</div>
+			        </div>
+			        			       <div id="" class="carousel-item carousel-item-destacado">
+			         		<a style="width:100%;" href="https://www.col.gob.mx/fomentoeconomico/contenido/NDE1Nzk=" title="Mejora Regulatoria">
+			         			<img class="img-fluid"  src="http://www.col.gob.mx/imagenv2.php?x=ODA0MDA=&amp;y=23&amp;z=1" border="0" alt="" />
+			         		</a>
+				        	<div class="carousel-caption ">
+	    						<h5>
+	    							<a href="https://www.col.gob.mx/fomentoeconomico/contenido/NDE1Nzk=" title="Mejora Regulatoria">
+	    								Mejora Regulatoria	    							</a>
+	    						</h5>
+	  						</div>
+			        </div>
+			        			       <div id="" class="carousel-item carousel-item-destacado">
+			         		<a style="width:100%;" href="https://www.col.gob.mx/AgendaDigital/" title="Agenda Digital">
+			         			<img class="img-fluid"  src="http://www.col.gob.mx/imagenv2.php?x=ODA0MDE=&amp;y=23&amp;z=1" border="0" alt="" />
+			         		</a>
+				        	<div class="carousel-caption ">
+	    						<h5>
+	    							<a href="https://www.col.gob.mx/AgendaDigital/" title="Agenda Digital">
+	    								Agenda Digital	    							</a>
+	    						</h5>
+	  						</div>
+			        </div>
+			        			       <div id="" class="carousel-item carousel-item-destacado">
+			         		<a style="width:100%;" href="https://www.col.gob.mx/contraloria/contenido/Mzk0MTk=" title="Declaración Patrimonial y de Intereses">
+			         			<img class="img-fluid"  src="http://www.col.gob.mx/imagenv2.php?x=ODA0MDQ=&amp;y=23&amp;z=1" border="0" alt="" />
+			         		</a>
+				        	<div class="carousel-caption ">
+	    						<h5>
+	    							<a href="https://www.col.gob.mx/contraloria/contenido/Mzk0MTk=" title="Declaración Patrimonial y de Intereses">
+	    								Declaración Patrimonial y de Intereses	    							</a>
+	    						</h5>
+	  						</div>
+			        </div>
+			        			    </div>
+			  </div>
+			</div>
+				</div><br>
+	</div>
+	<div class="row" id="destacados_2s">
+		<div class="col-md-6 col-xs-9" style="max-height: 250px;">
+			<div class="row container-destacados">
+								<div class="pb10" style="width: 95%;">
+					<h4>
+						<a href="https://www.col.gob.mx/Portal/contenido/NTA4MTg=" class="a-gray-link btn_destacados_idx" onmouseover="bntdestacados(50091,this)" id="id_destacado_50091">
+							<i id="50091" class="fa fa-external-link titlu-rojo-pu"></i>
+							Comisión de Búsqueda						
+						</a>
+					</h4>
+				</div>
+													<div class="pb10" style="width: 95%;">
+					<h4>
+						<a href="https://periodicooficial.col.gob.mx/p/25122021/sup01/121122501.pdf" class="a-gray-link btn_destacados_idx" onmouseover="bntdestacados(49710,this)" id="id_destacado_49710">
+							<i id="49710" class="fa fa-external-link titlu-rojo-pu"></i>
+							Plan Estatal de Desarrollo						
+						</a>
+					</h4>
+				</div>
+													<div class="pb10" style="width: 95%;">
+					<h4>
+						<a href="https://www.col.gob.mx/fomentoeconomico/contenido/NDE1Nzk=" class="a-gray-link btn_destacados_idx" onmouseover="bntdestacados(42504,this)" id="id_destacado_42504">
+							<i id="42504" class="fa fa-external-link titlu-rojo-pu"></i>
+							Mejora Regulatoria						
+						</a>
+					</h4>
+				</div>
+													<div class="pb10" style="width: 95%;">
+					<h4>
+						<a href="https://www.col.gob.mx/AgendaDigital/" class="a-gray-link btn_destacados_idx" onmouseover="bntdestacados(39931,this)" id="id_destacado_39931">
+							<i id="39931" class="fa fa-external-link titlu-rojo-pu"></i>
+							Agenda Digital						
+						</a>
+					</h4>
+				</div>
+													<div class="pb10" style="width: 95%;">
+					<h4>
+						<a href="https://www.col.gob.mx/contraloria/contenido/Mzk0MTk=" class="a-gray-link btn_destacados_idx" onmouseover="bntdestacados(42188,this)" id="id_destacado_42188">
+							<i id="42188" class="fa fa-external-link titlu-rojo-pu"></i>
+							Declaración Patrimonial y de Intereses						
+						</a>
+					</h4>
+				</div>
+					 
+			</div>        
+		</div>
+		<div class="hiden" style="max-height: 250px;">    
+			<div class="row container-destacados">
+																																																																																														 
+							</div> 
+		</div>
+		<div class="col-md-4 col-12 text-center">
+			<div class="row lyr_destacados_idx">
+									<div class="col-12 separador-padding-bottom-20 active" id="cont_50091">
+						<a href="https://www.col.gob.mx/Portal/contenido/NTA4MTg=" >
+						<img class="img-fluid" alt=""  src="http://www.col.gob.mx/imagenv2.php?x=ODA5ODk=&amp;y=23&amp;z=1" border="0" alt="" />
+					</a>
+					</div>
+									<div class="col-12 separador-padding-bottom-20 " id="cont_49710">
+						<a href="https://periodicooficial.col.gob.mx/p/25122021/sup01/121122501.pdf" >
+						<img class="img-fluid" alt=""  src="http://www.col.gob.mx/imagenv2.php?x=ODAzOTk=&amp;y=23&amp;z=1" border="0" alt="" />
+					</a>
+					</div>
+									<div class="col-12 separador-padding-bottom-20 " id="cont_42504">
+						<a href="https://www.col.gob.mx/fomentoeconomico/contenido/NDE1Nzk=" >
+						<img class="img-fluid" alt=""  src="http://www.col.gob.mx/imagenv2.php?x=ODA0MDA=&amp;y=23&amp;z=1" border="0" alt="" />
+					</a>
+					</div>
+									<div class="col-12 separador-padding-bottom-20 " id="cont_39931">
+						<a href="https://www.col.gob.mx/AgendaDigital/" >
+						<img class="img-fluid" alt=""  src="http://www.col.gob.mx/imagenv2.php?x=ODA0MDE=&amp;y=23&amp;z=1" border="0" alt="" />
+					</a>
+					</div>
+									<div class="col-12 separador-padding-bottom-20 " id="cont_42188">
+						<a href="https://www.col.gob.mx/contraloria/contenido/Mzk0MTk=" >
+						<img class="img-fluid" alt=""  src="http://www.col.gob.mx/imagenv2.php?x=ODA0MDQ=&amp;y=23&amp;z=1" border="0" alt="" />
+					</a>
+					</div>
+							</div>
+		</div>
+	</div>
+</div>
+</section>
+   <section id="gobierno" class="gobierno-section" style="padding-top: 70px;">
+<div class="container" id="sec_gobierno"><br><br>
+	<div class="row">
+		<h1 class="padding-left">Gobierno</h1>
+		<div class="col-12 separador-secciones-dark-2-pu"></div>
+		<span class="col-1 separador-secciones-dark-1-pu"></span>
+	</div>
+	<br><br>
+	<div class="row">
+		<div class="col-md-6 text-right padding-top-30 movil_gob">
+			<div class="row">
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3> 
+						<!-- <a href="#" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero"> 11</b> Secretarías 
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+						<!-- </a> -->
+					</h3>
+				</div>
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3> 
+						<!-- <a href="" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero"> 7</b> Subsecretarías 
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+						<!-- </a> -->
+					</h3>
+				</div>
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3> 
+						<!-- <a href="" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero"> 34</b> Organismos 
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+							<!-- </a> -->
+					</h3>
+				</div>
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3> 
+						<!-- <a href="" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero"> 8</b> Organismos Autónomos 
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+							<!-- </a> -->
+					</h3>
+				</div>
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3> 
+						<!-- <a href="" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero"> 10</b> Municipios 
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+						<!-- </a> -->
+					</h3>
+				</div>
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3>
+						<!-- <a href="" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero"> 1</b> Organismos Desconcentrados
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+						<!-- </a> -->
+					</h3>
+				</div>
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3>
+						<!-- <a href="" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero">1</b> H. Congreso del Estado 
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+						<!-- </a> -->
+					</h3>
+				</div>
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3>
+						<!-- <a href="" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero"> 1</b> Supremo Tribunal de Justicia
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+						<!-- </a> -->
+					</h3>
+				</div>
+				<div class="col-md-12 col-sm-6 separador-padding-bottom-20 a-gray-link">
+					<h3>
+						<!-- <a href="" class="a-gray-link" title=""> -->
+							<b class="gobierno-numero"> 1</b> Gobierno de la República
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+						<!-- </a> -->
+					</h3>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-md-6 text-center d-none d-md-block">
+			<div class="row">
+				<div class="col-12 separador-padding-bottom-20">
+					<img style="padding-top:10px; width: 200px;" class="img-fluid" src="https://www.col.gob.mx/assets/img/escudo.png" alt="Gobierno del Estado de Colima" title="Gobierno del Estado de Colima">
+				</div>
+				<div class="col-12">
+					<h5>
+						<!-- <a href="https://www.col.gob.mx/Portal/escudo" class="a-gray-link" title=""> -->
+							<span class="gobierno-numero">
+							Escudo Oficial <br>del Estado de Colima</span >
+							<!-- <i class="fa fa-external-link titlu-rojo-pu hide-movil"></i> -->
+						<!-- </a> -->
+					</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+</div>
+</section>            <section id="gabinete" class="gabinetes-section" style="padding-top: 70px;">
+        <div class="container hide-movil"><br><br>
+                <div class="row">
+                        <h1>Gabinete</h1>
+                        <div class="col-12 separador-secciones-dark-2-pu"></div>
+                        <span class="col-1 separador-secciones-dark-1-pu"></span>
+                </div>
+                <br><br>
+                <h3>Secretarías</h3>
+                <div class="row separador-gabinete-imagen-pu">
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Licda. Indira Vizcaíno Silva" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTA=">Licda. Indira Vizcaíno Silva</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTA=">Gobernadora del Estado de Colima</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Ing. Eduardo Jurado Escamilla" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTE=">Ing. Eduardo Jurado Escamilla</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTE=">Oficina de la Gubernatura</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="C. Alberto Eloy García Alcaraz" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="">C. Alberto Eloy García Alcaraz</a></h6>
+                                                                <p><a href="">Secretario General de Gobierno</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="C.P. Fabiola Verduzco Aparicio" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTM=">C.P. Fabiola Verduzco Aparicio</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTM=">Secretaria de Planeación, Finanzas y Administración</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Capitán de Navío IM. DEM. Héctor Alfredo Castillo Báez" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTQ=">Capitán de Navío IM. DEM. Héctor Alfredo Castillo Báez</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTQ=">Secretario de Seguridad Pública</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Lic. Francisco Javier Rodríguez García" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTU=">Lic. Francisco Javier Rodríguez García</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTU=">Secretario de Desarrollo Económico</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Dra. Martha Janeth Espinosa Mejía" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTY=">Dra. Martha Janeth Espinosa Mejía</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTY=">Secretaria de Salud</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Prof. Adolfo Núñez González" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTc=">Prof. Adolfo Núñez González</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTc=">Secretario de Educación y Cultura</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Arq. Marisol Neri León" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTg=">Arq. Marisol Neri León</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNTg=">Secretaria de Infraestructura, Desarrollo Urbano y Movilidad</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="C. Zalia María Gutiérrez Verduzco" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="">C. Zalia María Gutiérrez Verduzco</a></h6>
+                                                                <p><a href="">Encargada de despacho de la Secretaría de Bienestar Inclusión Social y Mujeres</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Mtra. Isela Guadalupe Uribe Alvarado" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjA">Mtra. Isela Guadalupe Uribe Alvarado</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjA">Contralora General del Estado</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+													<img alt="Lic. Roberto Rubio Torres" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							                                                        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjE=">Lic. Roberto Rubio Torres</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjE=">Consejero Jurídico del Poder Ejecutivo del Estado</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        
+
+                </div>
+                <h3>Subsecretarías</h3>
+                <div class="row separador-gabinete-imagen-pu">
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+                                                							<img alt="Lic. Francisco Javier Pinto" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjI=">Lic. Francisco Javier Pinto</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjI=">Subsecretario del Trabajo</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+                                                							<img alt="Ing. Jorge Padilla Castillo" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjM=">Ing. Jorge Padilla Castillo</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjM=">Subsecretario de Turismo</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+                                                							<img alt="Ing. Jaime Enrique Sotelo García" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjQ=">Ing. Jaime Enrique Sotelo García</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjQ=">Subsecretario de Desarrollo Rural</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+                                                							<img alt="Lic. José Gerardo Romero Quezada" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjU=">Lic. José Gerardo Romero Quezada</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjU=">Subsecretario de las Juventudes</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+                                                							<img alt="Ing. Armando González Manzo" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="">Ing. Armando González Manzo</a></h6>
+                                                                <p><a href="">Encargado de despacho de la Subsecretaría de Movilidad</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+                                                							<img alt="Lic. Emiliano Zizumbo Quintanilla" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjg=">Lic. Emiliano Zizumbo Quintanilla</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjg=">Subsecretario de Cultura</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                                        <div class="col-lg-3 mb-4">
+                                        <!-- Row -->
+                                        <div class="row">
+                                                <div class="col-md-8 col-centered">
+                                                							<img alt="C.P. Víctor Manuel Torrero Enríquez" src="https://admiweb.col.gob.mx/archivos_prensa/banco_img/gabinete/GdC_Foto_General_grises.png" alt="wrapkit" class="img-fluid rounded-circle" />
+							        
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                        <div class="pt-2">
+                                                                <h6 class="mt-4 font-weight-medium mb-0 bold"><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjk=">C.P. Víctor Manuel Torrero Enríquez</a></h6>
+                                                                <p><a href="https://www.col.gob.mx/Portal/contenido/NTAxNjk=">Subsecretario de Administración</a></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        
+
+                </div>
+</section>
+   <div id="ModalAvisos" class="modal fade  bd-example-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-lg" role="document">
+    <div style="width: 100% !important;" class="modal-content">
+      <div class="modal-header">
+        <h5 style="color:#fff !important;" class="modal-title">
+          Mensaje veda 2024        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><h2>
+	El contenido de este sitio ha sido temporalmente modificado en cumplimiento con las disposiciones legales y normativas en materia electoral, debido al inicio del periodo de campaña</h2></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+	.modal-dialog {
+			transform: translate(0, -50%);
+			top: 40%;
+			margin: 0 auto;
+	}
+</style>
+         <div class="container" id="sec_atencion"><br><br>
+    <br/>
+	<div class="row texto-blanco-pu">
+		<h1 class="padding-left">¡Contáctanos!</h1>
+		<div class="col-12 separador-secciones-dark-2-pu"></div>
+		<span class="col-1 separador-secciones-dark-1-pu"></span>
+	</div>
+	<br>
+	<div class="row section-contacto-pu ">
+                <div class="titulo_blanco size30 text-center bold col-centered">Atención Ciudadana</div>
+                <div class="sep5"></div>
+		<div class="col-md-6 text-center contacto-section-separador">
+			<div class="row">
+                <div class="sep10"></div>
+				<div class="col-12">
+					<div style="display:none" class="alert msg-contacto" role="alert"> <span></span> </div>
+					<form id="frmContacto" name="frmContacto">
+                        <div class="input-group pb10">
+                          <span class="input-group-addon adaptaraddon" id="basic-addon1"><i class="fa fa-user" style="padding-right:5px;"> </i></span>
+                          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="* Nombre"  style="font-style: italic;" />
+                          <span id="msg_nombre"></span>
+                        </div>
+						<div class="input-group pb10">
+                          <span class="input-group-addon adaptaraddon" id="basic-addon1"><i class="fa fa-user" style="padding-right:5px;"> </i></span>
+                          <input type="text" class="form-control" id="ap1" name="ap1" placeholder="* Primer Apellido"  style="font-style: italic;" />
+                          <span id="msg_ap1"></span>
+                        </div>
+						<div class="input-group pb10">
+                          <span class="input-group-addon adaptaraddon" id="basic-addon1"><i class="fa fa-user" style="padding-right:5px;"> </i></span>
+                          <input type="text" class="form-control" id="ap2" name="ap2" placeholder=" Segundo Apellido"  style="font-style: italic;" />
+                          <span id="msg_ap2"></span>
+                        </div>
+						<div class="input-group pb10">
+                            <select id="sexo" name="sexo" class="form-control pb10" style="padding-top: 10px;font-style: italic;">
+                                <option value="nada" selected="">Seleccionar el sexo</option>
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                            </select>
+                            <span id="msg_sexo"></span>
+                        </div>
+                        <div class="input-group pb10">
+                          <span class="input-group-addon adaptaraddon" id="basic-addon1"><i class="fa fa-phone" style="padding-right:5px;"> </i></span>
+                          <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono"  style="font-style: italic;" />
+                          <span id="msg_nombre"></span>
+                        </div>
+                        <div class="input-group pb10">
+                          <span class="input-group-addon adaptaraddon" id="basic-addon1"><i class="fa fa-envelope"> </i></span>
+                          <input type="email" class="form-control" id="email" name="email" placeholder="* Correo " style="font-style: italic;" />
+                          <span id="msg_mail"></span>
+                        </div>
+
+						<div class="input-group pb10">
+                            <select id="procedencia" name="procedencia" class="form-control pb10" style="padding-top: 10px;font-style: italic;">
+                                <option value="nada" selected="">Seleccionar la localidad</option>
+                                <option value="Armería">Armería</option>
+                                <option value="Colima">Colima</option>
+								<option value="Comala">Comala</option>
+								<option value="Coquimatlán">Coquimatlán</option>
+								<option value="Cuauhtémoc">Cuauhtémoc</option>
+								<option value="Ixtlahuacán">Ixtlahuacán</option>
+								<option value="Manzanillo">Manzanillo</option>
+								<option value="Minatitlán">Minatitlán</option>
+								<option value="Tecomán">Tecomán</option>
+								<option value="Villa de Álvarez">Villa de Álvarez</option>
+                            </select>
+                            <span id="msg_sexo"></span>
+                        </div>
+
+                        <div class="input-group pb10">
+                            <select id="asunto" name="asunto" class="form-control pb10" style="padding-top: 10px;font-style: italic;">
+                                <option value="nada" selected="">Seleccionar el tema</option>
+                                <option value="comentario">Comentario</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="petición">Petición</option>
+                            </select>
+                            <span id="msg_asunto"></span>
+                        </div>
+                        <div class="form-group pb10">
+                            <textarea class="form-control" id='mensaje' name='mensaje' placeholder="Cuál es tu requerimiento" style="font-style: italic;" ></textarea>
+                            <span id="msg_mensaje"></span>
+                        </div>
+                        <div class="row">
+                        	<div class="col-md-8">
+                        		<div class="form-group">
+		                            <div class="g-recaptcha" data-sitekey="6LcJhlgUAAAAAMuyT1TGklVsDJvfSspi1DQZxQg4" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+		                            <span id="msg_capcha"></span>
+		                        </div>
+                        	</div>
+                        	<div class="col-md-4" id="btn_respFix">
+                        		<div class="form-group">
+		                        	<button style="cursor:pointer;" type="button"  id="btn_atencionc" class="btn btn-danger col-12 boton-hover pull-right">Enviar</button>
+		                        </div>
+                        	</div>
+                        </div>
+                    </form>
+                    	
+
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 contacto-section-separador">
+			<!--<div class="row">
+				<div class="sep10"></div>
+				<div class="col-12 separador-padding-bottom-20">
+					<div class="titulo_blanco size20 bold">Descarga nuestra app Trámites GOBCOL</div>
+					<div class="row pt-4">
+						<div class="col-6">
+							<a class="btn btn-block custom-buttom-noticias responsive-width  " href="https://apps.apple.com/us/app/tr%C3%A1mites-gobcol/id1437562414?l=es&amp;ls=1" target="_blank" title="IOS"> <i class="fa fa-apple"></i> </a></div>
+						<div class="col-6">
+							<a class="btn btn-block custom-buttom-noticias responsive-width " href="https://play.google.com/store/apps/details?id=mx.gob.col.icsic.TramitesGobCol&amp;hl=es_419" target="_blank" title="android"> <i class="fa fa-android"></i> </a></div>
+					</div>
+
+				</div>
+			</div>-->
+
+			<div class="row" id="lyr_aciudadana">
+				<div class="col-12 texto-blanco">
+					<div class="sep10"></div>
+					<div class="titulo_blanco size18 bold">Nuestra dirección</div>
+					<div class="row">
+						<div class="col-12 lyr_mapa" style="height: 240px;"><br>
+							<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15066.31403958234!2d-103.6883766!3d19.25719265!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4d60a085d35d800d!2sComplejo+Administrativo+del+Gobierno+del+Estado!5e0!3m2!1ses-419!2smx!4v1505765351913' width='600' height='450' frameborder='0' style='border:0' allowfullscreen></iframe>						</div>
+					</div>
+				</div>
+				<br>
+				<p>&nbsp;</p>
+
+
+
+
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+						<a href="https://www.col.gob.mx/BuzonQuejas" title="Buzón de quejas virtual">	
+                        <img src="https://www.col.gob.mx/assets/img/contraloria.jpg" class="img-fluid " style="padding-top: 15px;" />
+                        </a>
+				</div>
+			</div>
+		</div>
+                <div class="sep10"></div>
+
+	</div>
+</div>
+<div class="sep5"></div>
+
+<div class="modal fade" id="mdlMensaje" name="mdlMensaje" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" style="padding-top:15%; overflow-y:visible;">
+	<div class="modal-dialog modal-m">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 style="margin:0;"></h3>
+			</div>
+			<div class="modal-body">
+				<div class="progress progress-striped active" style="margin-bottom:0;"><div class="progress-bar" style="width: 100%"></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- Modal -->
+	<div class="modal fade" id="modal-mensajes-pu" tabindex="-1" role="dialog" aria-labelledby="modalGenericaPu" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modal-titulo-pu"></h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body" id="modal-contenido-pu">
+	       
+	      </div>
+	      <div class="modal-footer" id="modal-footer-pu">
+	        <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Modal -->
+   <footer class="footer">
+   	<div class="container-fluid footer-backgroundcolor-pu">
+   		<div class="container-fluid footer-back-dark">&nbsp;</div>
+   		<div class="container">
+	   		<div class="row">
+	   			<div class="col-md-6 col-12 container-img-footer">
+	   			 	<div class="row">
+	   			 		<div class="col-md-12 col-12 ">
+	   			 			<img class="img-fluid" src="https://openapis.col.gob.mx/API_PU/img/logo-colima-2021.png" alt="Colima">
+	   			 		</div>
+	   			 		<div class="col-md-12 col-12 hidden-sm-down">
+	   			 			<p class="footer-texto-pu ">Complejo Administrativo del Gobierno del Estado 3er. Anillo Perif&eacute;rico, Esq. Ej&eacute;rcito Mexicano S/N. Colonia el Diezmo. C.P. 28010, Colima, Colima, M&eacute;xico. Tel. (312) 316 2000</p>
+	   			 		</div>
+	   			 		<div class="col-12 footer-link-left footer-links-color-pu">
+                            <a class="linksfooter" href="http://www.col.gob.mx/Portal/mapa_sitio" target="_self" title="">Mapa del sitio</a> <br>
+	   			 			<a target="_blank" class="linksfooter" href="http://www.col.gob.mx/Portal/contenido/MTA3MzI=" title="Pol&iacute;ticas de uso">Pol&iacute;ticas de uso y privacidad</a>
+	   			 			<!-- http://www.col.gob.mx/portal/contenido/OTQ5MA== -->
+
+	   			 		</div>
+	   			 	</div>
+	   			 </div> 
+	   			 <div class="col-md-6 col-12">
+	   			 	<div class="row footer-social-separador-pu">
+	   			 		 <div class="col-12 text-center footer-social-separador-pu"> 
+			   			 	<ul class="list-inline">
+			   			 	  <li class="list-inline-item"><span class="footer-icon-separador-pu"></span><a href="https://www.facebook.com/gobiernocolima/" target="_blank" title="Facebook"><i class="fa fa-facebook-official footer-facebook fa-3x" aria-hidden="true"></a></i></li>
+							  <li class="list-inline-item "><span class="footer-icon-separador-pu"></span><a href="https://twitter.com/gobiernocolima" target="_blank" title="Twitter"><svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></i></li>
+							  <li class="list-inline-item "><span class="footer-icon-separador-pu"></span><a href="https://www.youtube.com/user/GobiernoColima" target="_blank" title="Youtube"><i class="fa fa-youtube-play footer-youtube fa-3x" aria-hidden="true"></a></i></li>
+							  <!-- <li class="list-inline-item "><span class="footer-icon-separador-pu"></span><a href="http://gobiernocolima.blogspot.mx/" target="_blank" title="Blogspot"><i class="fa fa-rss-square footer-rss fa-3x" aria-hidden="true"></a></i></li> -->
+							  <!-- <li class="list-inline-item "><span class="footer-icon-separador-pu"></span><a href="https://soundcloud.com/gobcolradio/" target="_blank" title="SoundCloud"><i class="fa fa-soundcloud footer-soundcloud fa-3x" aria-hidden="true"></a></i></li> -->
+							</ul>
+	   			 		</div> 
+	   			 		<div class="col-12" >
+                        <div class="row padding-left-30">
+                        	<div class="col text-center">
+                        		<i class="fa fa-download fa-2x"></i><br>
+			   			 	  	<a href="http://www.col.gob.mx/Portal/intranet" target="_blank" title="Intranet" class="linksfooter">Intranet</a>
+                        	</div>
+                        	<!-- <div class="col text-center">
+                        		 <i class="fa fa-qrcode fa-2x" aria-hidden="true"></i><br>
+			   			 	  		<a href="http://www.firel.col.gob.mx/" target="_blank" title="Validación e.firma SAT" class="linksfooter">Validaci&oacute;n <br>e.firma SAT</a> 
+                        	</div> -->
+                        	<div class="col text-center">
+                        		<i class="fa fa-user fa-2x" aria-hidden="true"></i><br>
+			   			 	  	<a href="http://directoriointegral.col.gob.mx/" target="_blank" title="Directorio integral" class="linksfooter">Directorio <br> integral</a>
+                        	</div>
+                        	<div class="col text-center">
+                        		<i class="fa fa-check-circle-o fa-2x" aria-hidden="true"></i><br>
+			   			 	  		<a href="http://www.firel.col.gob.mx/" target="_blank" title="Validación de documentos con firma electrónica" class="linksfooter">Validaci&oacute;n &nbsp; <br> de documentos</a>
+                        	</div>
+                        </div>
+	   			 		</div>
+	   			 	</div>
+	   			 </div>
+	   		</div>
+	   </div>
+   	</div>
+  </footer>
+    <script type="text/javascript" src="https://openapis.col.gob.mx/API_PU/js/b4/tether.min.js"></script>
+    <script type="text/javascript" src="https://openapis.col.gob.mx/API_PU/js/b4/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://openapis.col.gob.mx/API_PU/js/plugins/sweetalert/sweetalert2.all.js"></script>
+    <!-- Font awesome -->
+    <script type='text/javascript'> var site_url ='https://www.col.gob.mx/index.php'; </script><script src='https://www.col.gob.mx/assets/js/customjs.js' type='text/javascript'></script><script src='https://www.col.gob.mx/assets/js/menu-fixed-top.js' charset='utf-8' type='text/javascript'></script><script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js' type='text/javascript'></script> <script src='https://www.col.gob.mx/assets/js/jquery.validate.min.js' type='text/javascript'></script><script src='https://www.col.gob.mx/assets/js/additional-methods.js' type='text/javascript'></script><script src='https://www.google.com/recaptcha/api.js'></script><script src='https://www.col.gob.mx/assets/js/enviar-email.js' type='text/javascript'></script><script src='https://www.col.gob.mx/assets/js/busquedageneral.js' type='text/javascript'></script><script src='https://www.col.gob.mx/assets/js/destacados.js' type='text/javascript'></script>
+    <script type="text/javascript" src="https://openapis.col.gob.mx/API_PU/js/b4/colgob.js"></script>
+</body>
+</html><br/><i class="fa fa-bullseye" aria-hidden="true" style="color: white;position: absolute;font-size: 8px;"></i>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://semov.col.gob.mx/citas3/buscar_cita.php -->
+<html>
+  <!-- InstanceBegin template="/Templates/Plantilla.dwt" codeOutsideHTMLIsLocked="false" --><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript">
+      var intevalo = setInterval("Reasignar_SESSION()", 36000);
+
+      function Reasignar_SESSION() {
+        var parametros = "opcion=Reasignar_SESSION";
+        var html = $.ajax({
+          type: "POST",
+          url: "ajax.php",
+          data: parametros,
+          cache: false,
+          async: false,
+        }).responseText;
+        //alert(html);
+      }
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=5" />
+
+    <title class="Nombre_Sistema">SUBSECRETARÍA DE MOVILIDAD</title>
+
+    <!-- ----------------mis agregados----------------------- -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/accesibilidad.css" />
+
+    <link rel="stylesheet" href="../assets/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../assets/customcss.css" />
+
+    <link rel="stylesheet" href="../assets/layout.css" />
+
+    <link
+      rel="SHORTCUT ICON"
+      href="https://openapis.col.gob.mx/API_PU/img/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <script type="text/javascript" src="../assets/accesibilidad.js"></script>
+
+    <script type="text/javascript" src="../assets/customjs.js"></script>
+
+    <script type="text/javascript" src="../assets/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="../assets/jquery-3.2.1.js"></script>
+
+    <script
+      type="text/javascript"
+      src="../assets/jquery.validate.min.js"
+    ></script>
+
+    <script type="text/javascript" src="../assets/bootstrap.min.js"></script>
+
+    <!-- --------------------------------------- -->
+
+    <link
+      rel="shortcut icon"
+      href="https://semov.col.gob.mx/citas3/imagenes/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/global.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/estilos.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/controles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- InstanceBeginEditable name="Head" -->
+    <!-- FRAMEWORK DE JQUERY -->
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery-1.6.2.js.descarga"
+    ></script>
+    <!-- THEMES DE JQUERY -->
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery-ui-1.8.16.custom.min.js.descarga"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.ui.all.css"
+    />
+    <!-- PLUGIN TIMEENTRY DE JQUERY -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.timeentry.css"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.timeentry.js.descarga"
+    ></script>
+    <!-- PLUGIN FORMATCURRENCY DE JQUERY -->
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.formatCurrency-1.4.0.js.descarga"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.formatCurrency.all.js.descarga"
+    ></script>
+    <!-- PLUGIN TOOLTIP  DE JQUERY -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.tooltip.css"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.tooltip.js.descarga"
+    ></script>
+    <!-- PLUGIN SIMPLE MODAL -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/basic.css"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.simplemodal.js.descarga"
+    ></script>
+    <!-- PLUGIN MENU DE JQUERY -->
+    <link
+      type="text/css"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/menu.css"
+      rel="stylesheet"
+    />
+    <!--<link type="text/css" href="lib/menu/white/menu.css" rel="stylesheet"/>-->
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/menu.js.descarga"
+    ></script>
+    <!-- PLUGIN DATATABLE -->
+    <link
+      type="text/css"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/demo_table_jui.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.dataTables.min.js.descarga"
+    ></script>
+    <!-- TIMERS -->
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery-timers.js.descarga"
+    ></script>
+    <!-- DIALOGS --->
+    <link
+      type="text/css"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/dialog.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/dialog.js.descarga"
+    ></script>
+    <!-- PRELOAD -->
+    <link
+      type="text/css"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/preload.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/preload.js.descarga"
+    ></script>
+    <!-- Captcha -->
+    <link
+      type="text/css"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/captcha.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/captcha.js.descarga"
+    ></script>
+    <!-- ValidationForm -->
+    <link
+      type="text/css"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/validationEngine.jquery.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.validationEngine.js.descarga"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/jquery.validationEngine-es.js.descarga"
+    ></script>
+    <!-- Cierra Netscape -->
+    <link
+      type="text/css"
+      href="./SUBSECRETARÍA DE MOVILIDAD_files/cierra_netscape.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/cierra_netscape.js.descarga"
+    ></script>
+    <!-- InstanceEndEditable -->
+  </head>
+  <body>
+    <div id="copyright" style="display: none">
+      Copyright © 2011 <a href="http://apycom.com/">Apycom jQuery Menus</a>
+    </div>
+    <!-- InstanceBeginEditable name="Body" --><!-- InstanceEndEditable -->
+    <div id="wrap">
+      <div id="header" style="display: inline">
+        <div id="menu_websercice"></div>
+
+        <div align="right" class="Nombre_Sistema">
+          SUBSECRETARÍA DE MOVILIDAD
+        </div>
+
+        <div class="Usuario">
+          <!-- InstanceBeginEditable name="Usuario" --><!-- InstanceEndEditable -->
+        </div>
+      </div>
+      <div id="div_menu" class="Menus">
+        <!-- InstanceBeginEditable name="Menus" -->
+        <script
+          type="text/javascript"
+          src="./SUBSECRETARÍA DE MOVILIDAD_files/menu_usr.js.descarga"
+        ></script>
+        <div id="menu" class="ui-corner-all">
+          <ul class="menu">
+            <li class="current">
+              <a href="javascript:Inicio();"
+                ><span class="nivel1">Inicio</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.finanzas.col.gob.mx/finanzas/vehicular/indexV3.php"
+                target="_blank"
+                ><span class="nivel1">Adeudos</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.finanzas.col.gob.mx/finanzas/vehicular/indexV3.php"
+                target="_blank"
+                ><span class="nivel1">Pagos</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.finanzas.col.gob.mx/finanzas/index.php"
+                target="_blank"
+                ><span class="nivel1">Estados de Cuenta Vehicular</span></a
+              >
+            </li>
+            <li>
+              <a href="http://www.semov.col.gob.mx/" target="_blank"
+                ><span class="nivel1">Movilidad</span></a
+              >
+            </li>
+            <li>
+              <a href="http://www.dgtysv.col.gob.mx/formatos" target="_blank"
+                ><span class="nivel1">Formatos</span></a
+              >
+            </li>
+            <li class="back" style="left: 30px; width: 64px">
+              <div class="left"></div>
+            </li>
+          </ul>
+        </div>
+        <!-- InstanceEndEditable -->
+      </div>
+      <div class="container">
+        <div id="contenido" class="Contenido">
+          <p align="right">Número de Citas: 1</p>
+          <fieldset class="ui-corner-all">
+            <legend class="ui-widget-header ui-corner-all Legends">
+              Datos de la Cita:
+            </legend>
+            <div style="padding-left: 5%; padding-right: 5%">
+              <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tbody>
+                  <tr>
+                    <td width="19%" align="left" valign="middle" class="Labels">
+                      Folio:
+                    </td>
+                    <td width="62%" align="left" valign="middle">
+                      20240301-0101008
+                    </td>
+                    <td width="19%" rowspan="8" align="center" valign="middle">
+                      <table
+                        width="100%"
+                        height="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tbody>
+                          <tr>
+                            <td height="46" align="center" valign="middle">
+                              <span
+                                class="button green"
+                                onclick="Imprime_Comprobante(&#39;20240301-0101008&#39;);"
+                                >Imprimir Reporte</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="48" align="center" valign="middle">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" class="Labels">Nombre:</td>
+                    <td align="left" valign="middle">
+                      JOSE LUIS ZARATE RODRIGUEZ&nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" class="Labels">CURP:</td>
+                    <td align="left" valign="middle">
+                      ZARL720502HCMRDS01&nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" class="Labels">
+                      Padrón Vehicular:
+                    </td>
+                    <td align="left" valign="middle">1992158228</td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" class="Labels">
+                      Fecha de la Cita:
+                    </td>
+                    <td align="left" valign="middle">01/03/2024</td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" class="Labels">
+                      Hora de la Cita:
+                    </td>
+                    <td align="left" valign="middle">07:15</td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" class="Labels">
+                      Oficina:
+                    </td>
+                    <td align="left" valign="middle">
+                      DIRECCIÓN REGIONAL COLIMA
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" class="Labels">
+                      Ventanilla:
+                    </td>
+                    <td align="left" valign="middle">VENTANILLA 1</td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="middle" class="Labels">
+                      Trámite a Realizar:
+                    </td>
+                    <td align="left" valign="middle">
+                      Cambio de propietario, baja y alta de automóvil, camión o
+                      camioneta nacional, persona física
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/mainmenu.js.descarga"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/global.js.descarga"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./SUBSECRETARÍA DE MOVILIDAD_files/funciones.js.descarga"
+    ></script>
+    <!-- InstanceBeginEditable name="Controladores" -->
+    <script type="text/javascript">
+      // JavaScript Document
+      $(document).ready(function (i) {
+        $("#Tbusqueda").val("folio");
+        $("#lbl_Tbusqueda").html("Folio:");
+      });
+      function Busca_Cita() {
+        var Txt = $("#text_Tbusqueda");
+        var CURP = $("#CURP");
+        var allFields = $([]).add(Txt, CURP);
+        var tips = $("#validate_tip");
+        tips.text("");
+        tips.removeClass("ui-state-error");
+        allFields.removeClass("ui-state-error");
+
+        var bValid = true;
+        bValid = bValid && Valida_Campo(Txt, tips) && Valida_Campo(CURP, tips);
+        if (bValid) {
+          Loading();
+          var parametros = "opcion=buscar_cita";
+          parametros += "&tipo=" + $("#Tbusqueda").val();
+          parametros += "&descrip=" + $("#text_Tbusqueda").val();
+          parametros += "&CURP=" + $("#CURP").val();
+          var datos = $.ajax({
+            type: "POST",
+            url: "ajax.php",
+            data: parametros,
+            cache: false,
+            async: false,
+            dataType: "text",
+          }).responseText;
+          Cierra_Loading();
+          if (datos != "") {
+            $("#contenido").html(datos);
+          } else {
+            Informacion(
+              "La información proporcionada no arrojo resultados",
+              450
+            );
+          }
+        }
+      }
+      function Cambia_TBusqueda() {
+        switch ($("#Tbusqueda").val()) {
+          case "serie":
+            $("#lbl_Tbusqueda").html("Padron Vehicular:");
+            $("#text_Tbusqueda").val("");
+            $("#text_Tbusqueda").attr("maxlength", "10");
+            break;
+          case "folio":
+            $("#lbl_Tbusqueda").html("Folio:");
+            $("#text_Tbusqueda").val("");
+            $("#text_Tbusqueda").attr("maxlength", "16");
+            break;
+        }
+      }
+      function Imprime_Comprobante(folio) {
+        var ventana = window.open(
+          "reportes/comprobante.php?folio=" + folio,
+          "_blank",
+          ""
+        );
+      }
+      function Cancela_Cita(Folio) {
+        var mensaje = "¿Esta seguro de cancelar la cita ?";
+        var html = Html("Confirmacion", mensaje);
+        $("body").append('<div id="emergente"></div>');
+        $("#emergente").html(html);
+        $("#emergente").dialog({
+          autoOpen: true,
+          width: 300,
+          modal: true,
+          title: "Cancelar Cita",
+          resizable: false,
+          closeOnEscape: false,
+          draggable: true,
+          position: "center",
+          buttons: {
+            Si: function () {
+              var parametros = "Folio=" + Folio;
+              Loading(true);
+              $("body").append('<div id="emergente"></div>');
+              $("#emergente").load(
+                "vista/cancela_cita.php",
+                parametros,
+                function () {
+                  $("#emergente").dialog({
+                    autoOpen: true,
+                    width: 300,
+                    modal: true,
+                    title: "Cancelar Cita",
+                    resizable: false,
+                    closeOnEscape: false,
+                    draggable: false,
+                    position: "center",
+                    buttons: {
+                      Guardar: function () {
+                        $("#formCancelaCita").validationEngine({
+                          promptPosition: "topRight",
+                          scroll: false,
+                        });
+                        var validacion =
+                          $("#formCancelaCita").validationEngine("validate");
+                        if (validacion) {
+                          Loading(true);
+                          var parametros = $("#formCancelaCita").serialize();
+                          parametros += "&opcion=cancela_cita";
+                          var regreso = $.ajax({
+                            type: "POST",
+                            url: "ajax.php",
+                            data: parametros,
+                            cache: false,
+                            async: false,
+                            dataType: "text",
+                          }).responseText;
+                          Cierra_Loading();
+                          $(this).html("");
+                          $(this).dialog("destroy");
+                          if (regreso == "1") {
+                            Informacion("Acción realizada con éxito", 300);
+                            window.location.reload(true);
+                          } else {
+                            DetectoError();
+                          }
+                        }
+                      },
+                      Cerrar: function () {
+                        $("#formCancelaCita").validationEngine("hideAll");
+                        $(this).html("");
+                        $(this).dialog("destroy");
+                        $("#emergente").remove();
+                      },
+                    },
+                  });
+                  Cierra_Loading();
+                }
+              );
+            },
+            No: function () {
+              $(this).html("");
+              $(this).dialog("destroy");
+              $("#emergente").remove();
+            },
+          },
+        });
+      }
+    </script>
+    <!-- InstanceEndEditable -->
+  </body>
+  <!-- InstanceEnd -->
+</html>
