@@ -59,7 +59,6 @@
     <script type="text/javascript" src="../assets/bootstrap.min.js"></script>
 
     <!-- --------------------------------------- -->
-
     <link
       rel="shortcut icon"
       href="https://semov.col.gob.mx/citas3/imagenes/favicon.ico"
@@ -268,6 +267,11 @@
               >
             </li>
             <li>
+              <a href="javascript:Buscar_Cita();"
+                ><span class="nivel1">Reimprimir Cita</span></a
+              >
+            </li>
+            <li>
               <a href="http://www.semov.col.gob.mx/" target="_blank"
                 ><span class="nivel1">Movilidad</span></a
               >
@@ -277,7 +281,7 @@
                 ><span class="nivel1">Formatos</span></a
               >
             </li>
-            <li class="back" style="left: 30px; width: 64px">
+            <li class="back" style="left: 30px; width: 64px; overflow: hidden">
               <div class="left"></div>
             </li>
           </ul>
@@ -285,108 +289,99 @@
         <!-- InstanceEndEditable -->
       </div>
       <div class="container">
-        <div id="contenido" class="Contenido">
-          <p align="right">Número de Citas: 1</p>
-          <fieldset class="ui-corner-all">
-            <legend class="ui-widget-header ui-corner-all Legends">
-              Datos de la Cita:
-            </legend>
-            <div style="padding-left: 5%; padding-right: 5%">
-              <table width="100%" border="0" cellspacing="0" cellpadding="5">
-                <tbody>
-                  <tr>
-                    <td width="19%" align="left" valign="middle" class="Labels">
-                      Folio:
-                    </td>
-                    <td width="62%" align="left" valign="middle">
-                      20240301-0101008
-                    </td>
-                    <td width="19%" rowspan="8" align="center" valign="middle">
-                      <table
-                        width="100%"
-                        height="100%"
-                        border="0"
-                        cellspacing="0"
-                        cellpadding="0"
-                      >
-                        <tbody>
-                          <tr>
-                            <td height="46" align="center" valign="middle">
-                              <span
-                                class="button green"
-                                onclick="Imprime_Comprobante(&#39;20240301-0101008&#39;);"
-                                >Imprimir Reporte</span
-                              >
-                            </td>
-                          </tr>
-                          <tr>
-                            <td height="48" align="center" valign="middle">
-                              &nbsp;
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="middle" class="Labels">Nombre:</td>
-                    <td align="left" valign="middle">
-                      JOSE LUIS ZARATE RODRIGUEZ&nbsp;
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="middle" class="Labels">CURP:</td>
-                    <td align="left" valign="middle">
-                      ZARL720502HCMRDS01&nbsp;
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="middle" class="Labels">
-                      Padrón Vehicular:
-                    </td>
-                    <td align="left" valign="middle">1992158228</td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="middle" class="Labels">
-                      Fecha de la Cita:
-                    </td>
-                    <td align="left" valign="middle">01/03/2024</td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="middle" class="Labels">
-                      Hora de la Cita:
-                    </td>
-                    <td align="left" valign="middle">07:15</td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="middle" class="Labels">
-                      Oficina:
-                    </td>
-                    <td align="left" valign="middle">
-                      DIRECCIÓN REGIONAL COLIMA
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="middle" class="Labels">
-                      Ventanilla:
-                    </td>
-                    <td align="left" valign="middle">VENTANILLA 1</td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="middle" class="Labels">
-                      Trámite a Realizar:
-                    </td>
-                    <td align="left" valign="middle">
-                      Cambio de propietario, baja y alta de automóvil, camión o
-                      camioneta nacional, persona física
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <div class="row">
+          <div class="col">
+            <div class="alert alert-info text-center">Número de Citas: 2</div>
+          </div>
+        </div>
+        <div class="card-deck">
+          <div class="card" style="max-width: ">
+            <h5 class="card-header">Folio: 20190417-0102023</h5>
+            <div class="card-body">
+              <p class="card-text">
+                <strong>Nombre:</strong> LUIS FELIPE SOTELO CHAVEZ
+              </p>
+              <p class="card-text">
+                <strong>CURP:</strong> SOCL821027HCMTHS06 <br />
+              </p>
+              <p class="card-text">
+                <strong>Padrón Vehicular:</strong> 2019138403 <br />
+              </p>
+              <p class="card-text">
+                <strong>Fecha de la Cita:</strong> 17/04/2019 <br />
+              </p>
+              <p class="card-text">
+                <strong>Hora de la Cita:</strong> 09:00 <br />
+              </p>
+              <p class="card-text">
+                <strong>Oficina:</strong> DIRECCIÓN REGIONAL COLIMA <br />
+              </p>
+              <p class="card-text">
+                <strong>Ventanilla:</strong> VENTANILLA 2 <br />
+              </p>
+              <p class="card-text">
+                <strong>Trámite a Realizar:</strong> Alta de automóvil, camión o
+                camioneta nueva, persona física
+              </p>
+
+              <div class="text-right" style="padding: 10px">
+                <div class="card-footer justify-content-between text-center">
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    onclick="Imprime_Comprobante();"
+                    style="background-color: #8c1e41"
+                    >Imprimir comprobante</a
+                  >
+                </div>
+              </div>
             </div>
-          </fieldset>
+          </div>
+          <div class="card" style="max-width: ">
+            <h5 class="card-header">Folio: 20190417-0102023</h5>
+            <div class="card-body">
+              <p class="card-text">
+                <strong>Nombre:</strong> LUIS FELIPE SOTELO CHAVEZ
+              </p>
+              <p class="card-text">
+                <strong>CURP:</strong> SOCL821027HCMTHS06 <br />
+              </p>
+              <p class="card-text">
+                <strong>Padrón Vehicular:</strong> 2019138403 <br />
+              </p>
+              <p class="card-text">
+                <strong>Fecha de la Cita:</strong> 16/04/2019 <br />
+              </p>
+              <p class="card-text">
+                <strong>Hora de la Cita:</strong> 09:00 <br />
+              </p>
+              <p class="card-text">
+                <strong>Oficina:</strong> DIRECCIÓN REGIONAL COLIMA <br />
+              </p>
+              <p class="card-text">
+                <strong>Ventanilla:</strong> VENTANILLA 2 <br />
+              </p>
+              <p class="card-text">
+                <strong>Trámite a Realizar:</strong> Alta de automóvil, camión o
+                camioneta nueva, persona física
+              </p>
+
+              <div class="text-right" style="padding: 10px">
+                <div class="card-footer justify-content-between text-center">
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    onclick="Imprime_Comprobante();"
+                    style="background-color: #8c1e41"
+                    >Imprimir comprobante</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div id="contenido" class="Contenido"></div>
       <div id="footer"></div>
     </div>
     <script
@@ -403,12 +398,17 @@
     ></script>
     <!-- InstanceBeginEditable name="Controladores" -->
     <script type="text/javascript">
-      // JavaScript Document
       $(document).ready(function (i) {
-        $("#Tbusqueda").val("folio");
-        $("#lbl_Tbusqueda").html("Folio:");
+        //$('#Tbusqueda').val('folio');
+        //$('#lbl_Tbusqueda').html('Folio:');
       });
+
       function Busca_Cita() {
+        $("#text_Tbusqueda").val(
+          $("#modelo").val() + "" + $("#clase").val() + "" + $("#serie").val()
+        );
+        //return;
+
         var Txt = $("#text_Tbusqueda");
         var CURP = $("#CURP");
         var allFields = $([]).add(Txt, CURP);
@@ -444,20 +444,24 @@
           }
         }
       }
-      function Cambia_TBusqueda() {
-        switch ($("#Tbusqueda").val()) {
-          case "serie":
-            $("#lbl_Tbusqueda").html("Padron Vehicular:");
-            $("#text_Tbusqueda").val("");
-            $("#text_Tbusqueda").attr("maxlength", "10");
-            break;
-          case "folio":
-            $("#lbl_Tbusqueda").html("Folio:");
-            $("#text_Tbusqueda").val("");
-            $("#text_Tbusqueda").attr("maxlength", "16");
-            break;
-        }
-      }
+
+      /*
+	function Cambia_TBusqueda(){    
+		switch($('#Tbusqueda').val()){			
+			case 'serie':
+				$('#lbl_Tbusqueda').html('Padron Vehicular:');
+				$('#text_Tbusqueda').val('');
+				$('#text_Tbusqueda').attr('maxlength','10');            
+				break;
+			case 'folio':
+				$('#lbl_Tbusqueda').html('Folio:');
+				$('#text_Tbusqueda').val('');
+				$('#text_Tbusqueda').attr('maxlength','16');            
+				break;
+		}
+	}
+	*/
+
       function Imprime_Comprobante(folio) {
         var ventana = window.open(
           "reportes/comprobante.php?folio=" + folio,

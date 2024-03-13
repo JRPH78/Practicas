@@ -304,37 +304,7 @@
 					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
 					Baja de placas del Estado de Colima registradas en el Padrón Vehicular, Persona Física.				</a>
 		    </div>
-								<div class="col-md-3 col-6 padding-bottom-30">
-				<a class="a-blue-link" title="Alta de automóvil, camión o camioneta nueva, persona física" href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/961">
-					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
-					Alta de automóvil, camión o camioneta nueva, persona física				</a>
-		    </div>
-								<div class="col-md-3 col-6 padding-bottom-30">
-				<a class="a-blue-link" title="Cambio de propietario, baja y alta de automóvil, camión o camioneta legalizada, persona física." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/965">
-					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
-					Cambio de propietario, baja y alta de automóvil, camión o camioneta legalizada, persona física.				</a>
-		    </div>
-								<div class="col-md-3 col-6 padding-bottom-30">
-				<a class="a-blue-link" title="Alta de motocicleta nueva, persona física." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/962">
-					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
-					Alta de motocicleta nueva, persona física.				</a>
-		    </div>
-								<div class="col-md-3 col-6 padding-bottom-30">
-				<a class="a-blue-link" title="Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, persona moral." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/958">
-					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
-					Cambio de propietario, baja y alta de automóvil, camión o camioneta nacional, persona moral.				</a>
-		    </div>
-								<div class="col-md-3 col-6 padding-bottom-30">
-				<a class="a-blue-link" title="Cambio de propietario, baja y alta de motocicleta nacional, persona física." href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105050000/964">
-					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
-					Cambio de propietario, baja y alta de motocicleta nacional, persona física.				</a>
-		    </div>
-								<div class="col-md-3 col-6 padding-bottom-30">
-				<a class="a-blue-link" title="Inscripción al Padrón de contratistas" href="https://www.col.gob.mx/Portal/DetalleTramiteReTYS/020105260000/1061">
-					<span style="padding-right: 10px;"><i class="fa fa-chevron-right"></i></span>
-					Inscripción al Padrón de contratistas				</a>
-		    </div>
-				<div class="padding-bottom-30 responsive-width">
+							<div class="padding-bottom-30 responsive-width">
 			<a href="https://www.col.gob.mx/Portal/Tramites" title="Otros trámites" class="btn btn-block custom-buttom-noticias btn-default responsive-width">
 				Otros trámites…
 			 </a>
